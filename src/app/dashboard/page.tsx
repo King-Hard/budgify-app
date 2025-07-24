@@ -10,9 +10,6 @@ export default function Dashboard() {
       >
         LOGOUT
       </button>
-      <div>
-        <div><p></p></div>
-      </div>
     </div>
   );
 };
