@@ -11,7 +11,7 @@ export default function Dashboard() {
         LOGOUT
       </button>
       <div>
-        
+        <div></div>
       </div>
     </div>
   );
