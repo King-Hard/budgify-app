@@ -1,5 +1,8 @@
 export default function AddBudget() {
   return (
-    <div>Add Budget</div>
+    <div>
+      <div>
+      </div> 
+    </div>
   );
 };
