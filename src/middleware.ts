@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { decrypt } from "@/lib/configs/session";
 
-const protectedRoutes = ["/dashboard"];
+const protectedRoutes = ["/admin"];
 const authRoutes = ["/login", "/signup"];
 
 export async function middleware(request: NextRequest) {
@@ -36,7 +36,7 @@ export async function middleware(request: NextRequest) {
 
   // Scenario 2: User tries to access auth route with valid session
   if (isAuthRoute && isValidSession) {
-    return NextResponse.redirect(new URL("/dashboard", request.url));
+    return NextResponse.redirect(new URL("/admin", request.url));
   };
 
   return NextResponse.next();

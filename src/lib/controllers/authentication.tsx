@@ -44,7 +44,7 @@ export async function signup(state, formData) {
 
   await createSession(result.insertedId.toString());
 
-  return redirect("/login");
+  return redirect("/admin");
 };
 
 export async function login(state, formData) {
@@ -81,7 +81,7 @@ export async function login(state, formData) {
 
   await createSession(existingUser._id.toString());
 
-  return redirect("/dashboard")
+  return redirect("/admin");
 };
 
 export async function logout() {
