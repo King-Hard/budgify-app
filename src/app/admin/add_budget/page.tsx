@@ -3,7 +3,7 @@ export default function AddBudget() {
     <div>
       <div>
         <h1>
-          <p></p>
+          <p>AHAHAHAHA</p>
         </h1>
       </div> 
     </div>
