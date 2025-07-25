@@ -42,9 +42,9 @@ export async function signup(state, formData) {
     password: hashedPassword,
   });
 
-  await createSession(result.insertedId.toString());
+  await createSession(result.insertedId.toString(), email);
 
-  return redirect("/admin");
+  return redirect("/admin/dashboard");
 };
 
 export async function login(state, formData) {
@@ -79,9 +79,9 @@ export async function login(state, formData) {
     email: formData.get("email"),
   };
 
-  await createSession(existingUser._id.toString());
+  await createSession(existingUser._id.toString(), existingUser.email);
 
-  return redirect("/admin");
+  return redirect("/admin/dashboard");
 };
 
 export async function logout() {

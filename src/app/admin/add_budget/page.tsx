@@ -1,7 +1,9 @@
 export default function AddBudget() {
   return (
-    <div>
-      
-    </div>
-  );
+    <form
+      className="pt-16 pl-6 sm:pl-12"
+    >
+        Add Budget
+    </form>
+  );  
 };

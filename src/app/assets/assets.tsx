@@ -3,6 +3,7 @@ import goal from "./goal.png";
 import budget from "./budget.png";
 import bill from "./bill.png";
 import dashboard from "./dashboard.png";
+import logout from "./logout.png"
 
 export const assets = {
   profile_icon,
@@ -10,4 +11,5 @@ export const assets = {
   budget,
   bill,
   dashboard,
+  logout,
 };

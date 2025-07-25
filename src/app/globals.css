@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+.profile-dropdown {
+  transition: all 0.2s ease;
+}
+.profile-dropdown:hover {
+  transform: scale(1.05);
+}

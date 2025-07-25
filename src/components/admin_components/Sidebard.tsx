@@ -1,4 +1,6 @@
+import Image from "next/image";
 import NavLink from "../Navigation";
+import { assets } from "@/app/assets/assets";
 
 export default function Sidebar() {
   return (

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { decrypt } from "@/lib/configs/session";
 
-const protectedRoutes = ["/admin"];
+const protectedRoutes = ["/admin", "/admin/dashboard", "/admin/add_budget", "/admin/bill_reminder", "/admin/goal_tracker"];
 const authRoutes = ["/login", "/signup"];
 
 export async function middleware(request: NextRequest) {
