@@ -25,7 +25,7 @@ export async function decrypt(session) {
     console.log("Failed to verify the session!");
   }
 };
-
+// nagdagdag ng email para to sa profile
 export async function createSession(userId: string, email: string) {
   const expireAt = new Date(Date.now() + 7 * 60 * 60 * 1000);
   const session = await encrypt({userId, expireAt, email});
