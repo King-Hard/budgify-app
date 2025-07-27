@@ -44,7 +44,7 @@ export default function Sidebar() {
         </div>
         <div>
           <h1>HAHAHAHA</h1>
-          <p></p>
+          <p>Helloo </p>
         </div>
         <div className="text-[#3786F2] hover:text-black hover:bg-gray-100 font-semibold mt-1">
           <Link
