@@ -23,7 +23,7 @@ export default function ProfileDropdown({ email }: { email: string }) {
           aria-label="User menu"
           aria-haspopup="true"
           aria-expanded={isOpen}
-          className="flex items-center justify-center w-10 h-10 rounded-full bg-[#3786F2] text-white font-medium transition-all"
+          className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all cursor-pointer"
         >
           {initial}
         </button>
@@ -33,7 +33,7 @@ export default function ProfileDropdown({ email }: { email: string }) {
         <div 
           role="menu"
           aria-orientation="vertical"
-          className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200"
+          className="py-1 absolute right-0 mt-2.5 w-48 bg-white rounded-md shadow-lg z-50 border border-gray-200"
         >
           <div className="px-4 py-2 border-b" role="none">
             <p className="text-sm font-medium truncate" role="status">{email}</p>
@@ -41,7 +41,7 @@ export default function ProfileDropdown({ email }: { email: string }) {
           <button
             onClick={handleLogout}
             role="menuitem"
-            className="block w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-100 transition-colors"
+            className="block w-full text-left px-4 py-2 text-sm text-black hover:bg-red-50 hover:text-red-700 transition-colors cursor-pointer"
           >
             Sign out
           </button>

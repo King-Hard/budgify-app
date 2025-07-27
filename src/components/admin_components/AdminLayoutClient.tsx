@@ -55,7 +55,7 @@ export default function AdminLayoutClient({
             {!isMobile && (
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="p-1 rounded-sm hover:bg-blue-100 hover:text-[#3786F2] transition-colors"
+                className="p-1 rounded-sm hover:bg-blue-100 hover:text-[#3786F2] transition-colors cursor-pointer"
               >
                 <Columns2 className="w-5 h-5"/>
               </button>
