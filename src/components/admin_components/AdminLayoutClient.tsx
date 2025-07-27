@@ -31,10 +31,10 @@ export default function AdminLayoutClient({
   const sidebarWidth = sidebarOpen ? (isMobile ? 0 : 255) : 60;
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen overflow-auto">
       {/* Sidebar */}
       <div
-        className={`transition-all duration-300 ease-in-out h-full`}
+        className={`transition-all duration-100 ease-in-out h-full`}
         style={{ width: sidebarWidth }}
       >
         <Sidebar isCollapsed={!sidebarOpen} />
@@ -48,9 +48,9 @@ export default function AdminLayoutClient({
         />
       )}
 
-      <div className="flex flex-col w-0 flex-1">
+      <div className="relative flex flex-col w-0 flex-1">
         {/* Fixed Header */}
-        <div className="flex items-center justify-between py-1.5 px-4 h-[60px] border-b border-l border-gray-200 z-10">
+        <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between py-1.5 px-4 h-[60px] border-b border-l border-gray-200 bg-white/20 backdrop-blur-sm">
           <div className="flex items-center gap-4">
             {!isMobile && (
               <button
@@ -70,7 +70,7 @@ export default function AdminLayoutClient({
         </div>
         
         {/* Scrollable Content Area */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto pt-[56px] hide-scrollbar">
           {children}
         </div>
       </div>
