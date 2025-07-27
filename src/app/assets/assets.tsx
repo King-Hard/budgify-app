@@ -4,7 +4,7 @@ import budget from "./budget.png";
 import bill from "./bill.png";
 import dashboard from "./dashboard.png";
 import logout from "./logout.png"
-
+import layout_dashboard from "./layout-dashboard.svg"
 export const assets = {
   profile_icon,
   goal,
@@ -12,4 +12,6 @@ export const assets = {
   bill,
   dashboard,
   logout,
+  layout_dashboard
 };
+
