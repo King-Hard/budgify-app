@@ -32,7 +32,7 @@ export default function ProfileDropdown({ email }: { email: string }) {
         <div>
           <div>
             <h1>HAHAHAHAHA</h1>
-            <p></p>
+            <p>hello hehehehe</p>
           </div>
         </div>
       </div>
