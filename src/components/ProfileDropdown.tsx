@@ -28,14 +28,6 @@ export default function ProfileDropdown({ email }: { email: string }) {
           {initial}
         </button>
       </div>
-      <div>
-        <div>
-          <div>
-            <h1>HAHAHAHAHA</h1>
-            <p>hello hehehehe</p>
-          </div>
-        </div>
-      </div>
       
       {isOpen && (
         <div 
