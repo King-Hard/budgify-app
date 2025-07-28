@@ -28,6 +28,9 @@ export default function ProfileDropdown({ email }: { email: string }) {
           {initial}
         </button>
       </div>
+      <div>
+        
+      </div>
       
       {isOpen && (
         <div 
