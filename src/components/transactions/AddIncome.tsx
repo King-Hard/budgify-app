@@ -1,13 +1,14 @@
 "use client";
 
 import {
-  Car,
+  Briefcase,
   ChevronDown,
   ChevronUp,
-  Gamepad2,
-  House,
+  Handshake,
+  Laptop,
+  PhilippinePeso,
   PlusCircle,
-  ShoppingCart,
+  SquaresExclude,
 } from "lucide-react";
 
 import { useState } from "react";
@@ -17,10 +18,10 @@ export default function AddIncome() {
   const [open, setOpen] = useState(false);
 
   const categories = [
-    { value: "salary", label: "Salary", icon: <Car size={16} /> },
-    { value: "freelance", label: "Freelance", icon: <Gamepad2 size={16} /> },
-    { value: "business", label: "Business", icon: <ShoppingCart size={16} /> },
-    { value: "investment", label: "Investment & Utilities", icon: <House size={16} /> },
+    { value: "salary", label: "Salary", icon: <Briefcase size={16} /> },
+    { value: "freelance", label: "Freelance", icon: <Laptop size={16} /> },
+    { value: "business", label: "Business", icon: <Handshake size={16} /> },
+    { value: "investment", label: "Investment", icon: <SquaresExclude size={16} /> },
   ];
 
   const handleCategorySelect = (category) => {
