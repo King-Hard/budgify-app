@@ -19,7 +19,7 @@ export default function ProfileDropdown({ email }: { email: string }) {
     <div className="relative">
       <div>
         <h1>HAHAHAHA</h1>
-        <p></p>
+        <p>Heloo boss</p>
       </div>
       <div className="flex items-center gap-2">
         <button 
