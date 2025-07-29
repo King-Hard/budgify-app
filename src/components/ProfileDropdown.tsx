@@ -17,7 +17,9 @@ export default function ProfileDropdown({ email }: { email: string }) {
 
   return (
     <div className="relative">
-      <div></div>
+      <div>
+        <h1></h1>
+      </div>
       <div className="flex items-center gap-2">
         <button 
           onClick={() => setIsOpen(!isOpen)}
