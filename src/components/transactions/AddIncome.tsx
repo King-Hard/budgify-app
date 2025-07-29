@@ -6,7 +6,6 @@ import {
   ChevronUp,
   Handshake,
   Laptop,
-  PhilippinePeso,
   PlusCircle,
   SquaresExclude,
 } from "lucide-react";
