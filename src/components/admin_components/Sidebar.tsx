@@ -70,7 +70,9 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
       </div>
 
       <div>
-        
+        <div>
+          
+        </div>
       </div>
 
       <div className="pt-9 pl-8">
