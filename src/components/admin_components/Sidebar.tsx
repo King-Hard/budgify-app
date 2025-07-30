@@ -68,15 +68,6 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
           <p className="text-[12px] text-gray-500">Smart budgeting made simple</p>
         </div>
       </div>
-
-      <div>
-        <div>
-          <h1>HAHAHAHA</h1>
-          <p>HAHAHAHAHA</p>
-          heaienfiwbefjidwr
-        </div>
-      </div>
-
       <div className="pt-9 pl-8">
         <h1 className="text-gray-500 text-sm font-semibold">NAVIGATION</h1>
       </div>
