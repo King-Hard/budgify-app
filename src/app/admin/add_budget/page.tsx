@@ -10,13 +10,13 @@ export default function AddBudget() {
   return (
     <div className="p-5 border-l border-gray-200">
       <div className="mb-6">
-        <h1 className="text-[#3786F2] text-3xl font-bold">Add Transaction</h1>
+        <h1 className="text-yellow-500 text-3xl font-bold">Add Transaction</h1>
         <p className="text-gray-500 mt-1">Record your income and expenses</p>
       </div>
       <div className="max-w-[550px] bg-white p-4 rounded-lg shadow-md">
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-1">
-            <CircleDollarSign className="text-[#3786F2] w-7 h-7"/>
+            <CircleDollarSign className="text-yellow-500 w-7 h-7"/>
             <h1 className="text-2xl font-semibold">New Transaction</h1>
           </div>
           <p className="text-gray-500 text-sm">

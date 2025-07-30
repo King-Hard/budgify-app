@@ -49,7 +49,7 @@ export default function AddIncome() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="w-full border rounded-md p-2.5 px-3 text-left flex justify-between items-center"
+          className="w-full border rounded-md p-2.5 px-3 text-left flex justify-between items-center cursor-pointer"
         >
           <div className="flex gap-2 items-center">
             {selectedCategory ? (
@@ -69,7 +69,7 @@ export default function AddIncome() {
             {categories.map((category) => (
               <li
                 key={category.value}
-                className="px-3 py-2 text-black hover:text-green-600 hover:bg-green-50 rounded-md cursor-pointer flex gap-2 items-center"
+                className="px-3 py-2 text-black hover:text-green-600 hover:bg-green-50 rounded-md cursor-pointer flex gap-2 items-center "
                 onClick={() => handleCategorySelect(category)}
               >
                 {category.icon}

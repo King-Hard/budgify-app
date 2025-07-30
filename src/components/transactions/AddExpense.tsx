@@ -53,7 +53,7 @@ export default function AddExpense() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="w-full border rounded-md p-2.5 px-3 text-left flex justify-between items-center"
+          className="w-full border rounded-md p-2.5 px-3 text-left flex justify-between items-center cursor-pointer"
         >
           <div className="flex gap-2 items-center">
             {selectedCategory ? (
