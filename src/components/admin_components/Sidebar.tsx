@@ -73,7 +73,9 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
       </div>
       <div>
         <div>
-          
+          <div>
+            
+          </div>
         </div>
       </div>
       <div className="p-5 pt-3">
