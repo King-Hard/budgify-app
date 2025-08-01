@@ -74,7 +74,7 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
       <div>
         <div>
           <div>
-            <h1></h1>
+            <h1>HAHAHAHAHAH</h1>
           </div>
         </div>
       </div>
