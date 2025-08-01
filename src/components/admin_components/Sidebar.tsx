@@ -71,17 +71,6 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
       <div className="pt-9 pl-8">
         <h1 className="text-gray-500 text-sm font-semibold">NAVIGATION</h1>
       </div>
-      <div>
-        <div>
-          <div>
-            <h1>HAHAHAHAHAH</h1>
-            <p>asddadas</p>
-          </div>
-          <div>
-            <h1></h1>
-          </div>
-        </div>
-      </div>
       <div className="p-5 pt-3">
         <div className={`${pathName === "/admin/dashboard" ? "text-blue-600 bg-blue-50 border border-blue-500 font-medium mt-1 rounded-md" : "font-medium mt-1 rounded-md border border-gray-200 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-500"}`}>
           <Link
