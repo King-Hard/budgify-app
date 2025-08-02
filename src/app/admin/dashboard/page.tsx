@@ -154,13 +154,6 @@ export default function Dashboard() {
         </div>
 
       </div>
-      <div>
-        <h1>HAHAHAHAH</h1>
-        <p>HAHAHAHHA</p>
-        <div>
-          <h1>agsbdhiabhdsba</h1>
-        </div>
-      </div>
     </div>
   );
 }; 
