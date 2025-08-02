@@ -156,7 +156,7 @@ export default function Dashboard() {
       </div>
       <div>
         <h1>HAHAHAHAH</h1>
-        <p></p>
+        <p>HAHAHAHHA</p>
       </div>
     </div>
   );
