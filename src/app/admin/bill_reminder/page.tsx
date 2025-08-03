@@ -218,7 +218,9 @@ export default function BillReminder() {
             </div>
 
             <div>
-              <div></div>
+              <div>
+                <h1></h1>
+              </div>
             </div>
 
             <div className="w-full">
