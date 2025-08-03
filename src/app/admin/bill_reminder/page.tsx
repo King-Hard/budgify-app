@@ -218,9 +218,9 @@ export default function BillReminder() {
             </div>
 
             <div>
-
+              <div></div>
             </div>
-            
+
             <div className="w-full">
               <div className="flex justify-between items-center">
                 <h1 className="font-medium text-md sm:text-lg">Insurance</h1>
