@@ -11,7 +11,7 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
 
   if (isCollapsed) {
   return (
-    <div className="flex flex-col border-r border-gray-200 w-[61px] h-screen">
+    <div className="flex flex-col border-r border-gray-200 w-[61px] h-full">
       <div className="px-2 py-[9.5px] flex justify-center border-b border-gray-200">
         <Wallet className="rounded-md w-10 h-10 p-2 text-white bg-[#3786F2]" />
       </div>
@@ -60,7 +60,7 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
 
   // Full version (your original)
   return (
-    <div className="border-r border-gray-200 flex flex-col w-[256px] h-screen">
+    <div className="border-r border-gray-200 flex flex-col w-[256px] h-full">
       <div className="p-5 flex items-center gap-3 border-b border-gray-200">
         <Wallet className="rounded-md w-10 h-10 p-2 text-white bg-[#3786F2]"/>
         <div>
@@ -126,7 +126,7 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
               <DollarSign className="w-4 h-4"/>
               <p>Expenses</p>
             </div>
-            <h1 className="font-bold text-lg">₱18,500</h1>
+            <h1 className="font-bold text-lg">₱10,000</h1>
           </div>
         </div>
       </div>

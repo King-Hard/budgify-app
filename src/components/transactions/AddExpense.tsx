@@ -100,7 +100,7 @@ export default function AddExpense() {
 
       <div className="mt-8 text-white">
         <button 
-          className="rounded-md p-3 w-full flex items-center justify-center gap-2 bg-red-700 cursor-pointer"
+          className="rounded-md p-3 w-full flex items-center justify-center gap-2 bg-red-600 cursor-pointer hover:bg-red-700" 
           type="submit"
         >
           <MinusCircle className="w-5 h-5"/>

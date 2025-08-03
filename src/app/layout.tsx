@@ -10,27 +10,34 @@ export const metadata: Metadata = {
   description: "Track your expenses and manage your budget",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50` }>
-        <div className="flex justify-between border border-b-0 rounded-t-md p-1.5 mt-3 ml-3 mr-3 mb-0">
-          <div className="flex gap-2 items-center">
-            <div className=" w-3 h-3 rounded-full bg-red-500"></div>
-            <div className=" w-3 h-3 rounded-full bg-yellow-500"></div>
-            <div className=" w-3 h-3 rounded-full bg-green-500"></div>
+      <body className={`${inter.className} bg-gray-50 min-h-screen`}>
+        {/* Outer wrapper for margin and centering */}
+        <div className="mb-0 mt-3 mr-3 ml-3 flex justify-center items-center">
+          {/* Main container with visible full border */}
+          <div className="w-full max-w-[1550px] h-[calc(100vh-24px)] border rounded-t-md bg-gray-50 shadow flex flex-col overflow-hidden">
+            {/* Mac window style header */}
+            <div className="flex justify-between items-center border-b p-1.5 rounded-t-md">
+              <div className="flex gap-2 items-center">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <h1 className="text-[14px] font-bold">Budgify</h1>
+              <div className="flex gap-2 items-center invisible">
+                <div className="w-3 h-3 rounded-full"></div>
+                <div className="w-3 h-3 rounded-full"></div>
+                <div className="w-3 h-3 rounded-full"></div>
+              </div>
+            </div>
+
+            {/* Scrollable content */}
+            <div className="flex-1 overflow-y-auto hide-scrollbar bg-gray-50">
+              {children}
+            </div>
           </div>
-          <div>
-            <h1 className="flex justify-center items-center text-[14px] font-bold">Budgify</h1>
-          </div>
-          <div className="flex gap-2 items-center">
-            <div className=" w-3 h-3 rounded-full "></div>
-            <div className=" w-3 h-3 rounded-full "></div>
-            <div className=" w-3 h-3 rounded-full "></div>
-          </div>        
-        </div>
-        <div className="border ml-3 mr-3 mb-3">
-          {children}
         </div>
       </body>
     </html>

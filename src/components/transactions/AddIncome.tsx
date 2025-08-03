@@ -96,7 +96,7 @@ export default function AddIncome() {
 
       <div className="mt-8 text-white">
         <button 
-          className="rounded-md p-3 w-full flex items-center justify-center gap-2 bg-green-700 cursor-pointer"
+          className="rounded-md p-3 w-full flex items-center justify-center gap-2 bg-green-600 cursor-pointer hover:bg-green-700"
           type="submit"
         >
           <PlusCircle className="w-5 h-5"/>

@@ -8,6 +8,12 @@
   transform: scale(1.05);
 }
 
+html, body {
+  overflow: hidden; /* Prevent default browser scroll */
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }

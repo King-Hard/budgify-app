@@ -31,16 +31,16 @@ export default function AdminLayoutClient({
   const sidebarWidth = sidebarOpen ? (isMobile ? 0 : 255) : 60;
 
   return (
-    <div className="flex h-screen overflow-auto">
-      {/* Sidebar */}
+    <div className="flex flex-1 min-h-0 h-full">
+      {/* Sidebar - static, no scroll */}
       <div
-        className={`transition-all duration-100 ease-in-out h-full`}
+        className="h-full transition-normal duration-100 ease-in-out"
         style={{ width: sidebarWidth }}
       >
         <Sidebar isCollapsed={!sidebarOpen} />
       </div>
 
-      {/* Mobile overlay when sidebar is open */}
+      {/* Mobile overlay */}
       {isMobile && sidebarOpen && (
         <div 
           className="fixed inset-0 bg-opacity-50 z-40 md:hidden"
@@ -48,7 +48,8 @@ export default function AdminLayoutClient({
         />
       )}
 
-      <div className="relative flex flex-col w-0 flex-1">
+      {/* Main area */}
+      <div className="relative flex flex-col flex-1 min-h-0">
         {/* Fixed Header */}
         <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between py-1.5 px-4 h-[60px] border-b border-l border-gray-200 bg-white/20 backdrop-blur-sm">
           <div className="flex items-center gap-4">
@@ -68,9 +69,9 @@ export default function AdminLayoutClient({
             <div className="w-10 h-10 rounded-full bg-gray-300"></div>
           )}
         </div>
-        
-        {/* Scrollable Content Area */}
-        <div className="flex-1 overflow-y-auto pt-[56px] hide-scrollbar">
+
+        {/* Scrollable content only */}
+        <div className="flex-1 overflow-y-auto pt-[55px] hide-scrollbar">
           {children}
         </div>
       </div>
