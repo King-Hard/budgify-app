@@ -217,16 +217,6 @@ export default function BillReminder() {
               <Car className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
 
-            <div>
-              <div>
-                <h1>HAHAHAHA</h1>
-                <p>HAHAHAH</p>
-                <div>
-                  
-                </div>
-              </div>
-            </div>
-
             <div className="w-full">
               <div className="flex justify-between items-center">
                 <h1 className="font-medium text-md sm:text-lg">Insurance</h1>
