@@ -1,6 +1,6 @@
 "use client";
 
-import AddBill from "@/components/bill_reminder/AddBill";
+import AddBill from "@/components/BIllCompo/AddBill";
 import { Bell, Briefcase, Car, CheckCircle, Clock, CreditCard, House, Laptop, Plus, ShoppingCart, Timer, TriangleAlert, Utensils, Wifi, Zap } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 

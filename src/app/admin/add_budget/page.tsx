@@ -1,6 +1,6 @@
 "use client";
-import AddExpense from "@/components/transactions/AddExpense";
-import AddIncome from "@/components/transactions/AddIncome";
+import AddExpense from "@/components/transactionsCompo/AddExpense";
+import AddIncome from "@/components/transactionsCompo/AddIncome";
 import { PlusCircle, MinusCircle, CircleDollarSign } from "lucide-react";
 import { useState } from "react";
 

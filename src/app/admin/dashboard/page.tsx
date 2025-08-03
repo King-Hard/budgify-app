@@ -1,5 +1,6 @@
 "use client";
 
+import BudgetMonth from "@/components/DashboardCompo/BudgetMonth";
 import { Briefcase, Laptop, PiggyBank, ShoppingCart, Target, TrendingDown, TrendingUp, Utensils } from "lucide-react";
 import { useEffect, useRef } from "react";
 
@@ -28,7 +29,7 @@ export default function Dashboard() {
             <TrendingUp className="text-green-600 w-5 h-5"/>
           </div>
           <div>
-            <h1 className="text-2xl text-green-600 font-bold">₱ 25,000</h1>
+            <h1 className="text-2xl text-green-600 font-bold">₱ 35,000</h1>
             <p className="text-sm text-gray-500">+12% from last month</p>
           </div>
         </div>
@@ -50,7 +51,7 @@ export default function Dashboard() {
             <PiggyBank className="text-violet-600 w-5 h-5"/>
           </div>
           <div>
-            <h1 className="text-2xl text-violet-600 font-bold">₱ 6,500</h1>
+            <h1 className="text-2xl text-violet-600 font-bold">₱ 15,000</h1>
             <p className="text-sm text-gray-500">+25% from last month</p>
           </div>
         </div>
@@ -61,16 +62,21 @@ export default function Dashboard() {
             <Target className="text-yellow-600 w-5 h-5"/>
           </div>
           <div>
-            <h1 className="text-2xl text-yellow-600 font-bold">₱ 1,500</h1>
+            <h1 className="text-2xl text-yellow-600 font-bold">₱ 10,000</h1>
             <p className="text-sm text-gray-500">7% of monthly budget</p>
           </div>
         </div>
       </div>
 
       <div className="w-full p-5 rounded-lg shadow-sm bg-white mt-6">
-        <div className="flex items-center gap-2">
-          <Target className="text-blue-500"/>
-          <h1 className="text-2xl font-medium">Monthly Budget Progress</h1>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Target className="text-blue-500"/>
+            <h1 className="text-2xl font-medium">Monthly Budget Progress</h1>
+          </div>
+          <div>
+            <BudgetMonth/>
+          </div>
         </div>
         <div className="text-gray-500 text-sm">
           <p>You've spent ₱10,000 of your ₱20,000 budget</p>

@@ -1,14 +1,14 @@
 "use client";
 
-import Sidebar from "@/components/admin_components/Sidebar";
+import Sidebar from "@/components/AdminCompo/Sidebar";
 import ProfileDropdown from "@/components/ProfileDropdown";
 import { Columns2 } from "lucide-react";
 import { useState, useEffect } from "react";
 
-export default function AdminLayoutClient({ 
-  children, 
-  email 
-}: { 
+export default function AdminLayoutClient({
+  children,
+  email,
+}: {
   children: React.ReactNode;
   email: string;
 }) {
@@ -24,8 +24,8 @@ export default function AdminLayoutClient({
     };
 
     handleResize(); // Initial check
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const sidebarWidth = sidebarOpen ? (isMobile ? 0 : 255) : 60;
@@ -42,7 +42,7 @@ export default function AdminLayoutClient({
 
       {/* Mobile overlay */}
       {isMobile && sidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-opacity-50 z-40 md:hidden"
           onClick={() => setSidebarOpen(false)}
         />
@@ -58,7 +58,7 @@ export default function AdminLayoutClient({
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 className="p-1 rounded-sm hover:bg-blue-100 hover:text-blue-600 transition-colors cursor-pointer"
               >
-                <Columns2 className="w-5 h-5"/>
+                <Columns2 className="w-5 h-5" />
               </button>
             )}
             <h1 className="font-medium">Financial Dashboard</h1>
@@ -77,4 +77,4 @@ export default function AdminLayoutClient({
       </div>
     </div>
   );
-};
+}
