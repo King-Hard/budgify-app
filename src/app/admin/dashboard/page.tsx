@@ -122,7 +122,7 @@ export default function Dashboard() {
               </div>
 
               <div>
-                <h1></h1>
+                <h1>HAHAHAHA</h1>
               </div>
 
               <div className="flex justify-between items-center">
