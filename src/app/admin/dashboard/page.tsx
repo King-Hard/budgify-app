@@ -122,9 +122,9 @@ export default function Dashboard() {
               </div>
 
               <div>
-
+                <h1></h1>
               </div>
-              
+
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">Today</h1>
                 <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">food</p>
