@@ -23,3 +23,9 @@ html, body {
   scrollbar-width: none;    /* Firefox */
 }
 
+/* Add to your global CSS if needed */
+.no-scroll-x {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+

@@ -10,14 +10,14 @@ export default function BudgetMonth() {
     <div className="flex gap-2">
       <button
         onClick={() => setBudget(true)}
-        className="text-blue-600 py01 px-2 rounded-md bg-blue-50 hover:bg-blue-100 cursor-pointer "
+        className="text-blue-600 py-1 px-2 rounded-md bg-blue-50 hover:bg-blue-100 cursor-pointer w-full sm:w-auto text-sm sm:text-base "
       >
-        How much is your budget for this month?
+        How much is your budget this month?
       </button>
 
       <button
         onClick={() => setEdit(true)}
-        className="py-1 px-2 bg-blue-50 hover:bg-blue-100 rounded-md text-blue-600 cursor-pointer "
+        className="py-1 px-2 bg-blue-50 hover:bg-blue-100 rounded-md text-blue-600 cursor-pointer w-full sm:w-auto text-sm sm:text-base "
       >
         You want to edit?
       </button>

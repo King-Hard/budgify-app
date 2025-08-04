@@ -1,7 +1,7 @@
 "use client";
 
 import BudgetMonth from "@/components/DashboardCompo/BudgetMonth";
-import { Briefcase, Laptop, PiggyBank, ShoppingCart, Target, TrendingDown, TrendingUp, Utensils } from "lucide-react";
+import { Briefcase, CircleDollarSign, Laptop, PiggyBank, ShoppingCart, Target, TrendingDown, TrendingUp, Utensils } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 export default function Dashboard() {
@@ -69,42 +69,44 @@ export default function Dashboard() {
       </div>
 
       <div className="w-full p-5 rounded-lg shadow-sm bg-white mt-6">
-        <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Target className="text-blue-500"/>
-            <h1 className="text-2xl font-medium">Monthly Budget Progress</h1>
+            <Target className="text-blue-500 "/>
+            <h1 className="text-xl sm:text-2xl font-medium">Monthly Budget Progress</h1>
           </div>
-          <div>
-            <BudgetMonth/>
-          </div>
-        </div>
-        <div className="text-gray-500 text-sm">
-          <p>You've spent ₱10,000 of your ₱20,000 budget</p>
+        <div className="text-gray-500 ">
+          <p className="text-sm sm:text-base">You've spent ₱10,000 of your ₱20,000 budget</p>
         </div>
 
-        <div>
+        <div className="mb-6">
           <div className="w-full bg-gray-200 h-3 rounded-full mt-5 mb-5">
             <div className="bg-blue-500 h-3 rounded-full w-1/2"></div>
           </div>
             <div className="flex justify-between w-full text-sm">
-            <p className="text-gray-500">₱0</p>
+            <p className="text-gray-500">₱10,000</p>
             <p className="text-red-500 font-medium">50% used</p>
             <p className="text-gray-500">₱20,000</p>
           </div>
         </div>
+
+          <div className="flex">
+            <BudgetMonth/>
+          </div>
       </div>
 
       <div className="bg-white p-5 rounded-lg shadow-sm w-full mt-6">
         <div>
-          <div className="flex justify-between items-center">     
-            <h1 className="text-2xl font-medium">Recent Transactions</h1>
+          <div className="flex justify-between items-center"> 
+            <div className="flex items-center gap-2">
+              <CircleDollarSign className="text-yellow-600"/>
+              <h1 className="text-xl sm:text-2xl font-medium">Transactions</h1>
+            </div>    
             <input 
               type="month" 
               ref={monthRef} 
-              className="px-2 py-1 rounded-md bg-slate-50"
+              className="px-2 py-1 text-sm sm:text-base rounded-md bg-slate-50"
             />
           </div>
-          <p className="text-sm text-gray-500">Your latest financial activities</p>
+          <p className="text-sm sm:text-base text-gray-500">Your latest financial activities</p>
         </div>
 
         <div className="mt-6">    
@@ -121,7 +123,7 @@ export default function Dashboard() {
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">Today</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-sm font-medium flex items-center">food</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">food</p>
               </div>
             </div>
           </div>
@@ -139,7 +141,7 @@ export default function Dashboard() {
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">1 day ago</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-sm font-medium flex items-center">shopping</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">shopping</p>
               </div>
             </div>
           </div>
@@ -157,7 +159,7 @@ export default function Dashboard() {
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">3 days ago</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-sm font-medium flex items-center">salary</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">salary</p>
               </div>
             </div>
           </div>
@@ -175,7 +177,7 @@ export default function Dashboard() {
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">2 weeks ago</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-sm font-medium flex items-center">freelance</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">freelance</p>
               </div>
             </div>
           </div>

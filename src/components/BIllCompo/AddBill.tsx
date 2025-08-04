@@ -7,6 +7,7 @@ import {
   CreditCard,
   House,
   Plus,
+  PlusCircle,
   Wifi,
   Zap,
 } from "lucide-react";
@@ -40,7 +41,10 @@ export default function AddBill({onCancel}) {
       className="mt-6 bg-white shadow-md rounded-lg p-5 "
     >
       <div className="">
-        <h1 className="text-2xl font-medium">Add New Bill Reminder</h1>
+        <div className="flex items-center gap-2">
+          <PlusCircle className="text-violet-600"/> 
+          <h1 className="text-2xl font-medium">Add New Bill Reminder</h1>
+        </div>
         <p className="text-gray-500">Set up a reminder for your upcoming bill</p>
       </div>
 

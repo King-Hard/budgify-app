@@ -19,7 +19,7 @@ export default function AddBudget() {
             <CircleDollarSign className="text-yellow-500 w-7 h-7"/>
             <h1 className="text-2xl font-semibold">New Transaction</h1>
           </div>
-          <p className="text-gray-500 text-sm">
+          <p className="text-gray-500 text-sm sm:text-base">
             Add a new income or expense to track your budget
           </p>
         </div>
