@@ -120,6 +120,10 @@ export default function Dashboard() {
                 <h1 className="font-medium text-md sm:text-lg">Launch at McDonald's</h1>
                 <p className="text-md sm:text-lg font-bold text-red-600">-₱450</p>
               </div>
+
+              <div>
+
+              </div>
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">Today</h1>
