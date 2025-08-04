@@ -121,15 +121,6 @@ export default function Dashboard() {
                 <p className="text-md sm:text-lg font-bold text-red-600">-₱450</p>
               </div>
 
-              <div>
-                <h1>HAHAHAHA</h1>
-                <p>AJSDOASdoads</p>
-                <div>
-                  <h1>adsadasd</h1>
-                  <p>adad</p>
-                </div>
-              </div>
-
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">Today</h1>
                 <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">food</p>
