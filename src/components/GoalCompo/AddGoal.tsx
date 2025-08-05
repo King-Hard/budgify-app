@@ -1,29 +1,30 @@
 "use client";
 
 import {
-  Car,
   ChevronDown,
   ChevronUp,
-  CreditCard,
+  GraduationCap,
+  Handshake,
   House,
+  Laptop,
+  Plane,
   Plus,
   PlusCircle,
-  Wifi,
-  Zap,
+  ShieldAlert,
 } from "lucide-react";
-
 import { useState } from "react";
 
-export default function AddBill({ onCancel }) {
+export default function AddGoal({ onCancel }) {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [open, setOpen] = useState(false);
 
   const categories = [
-    { value: "utilities", label: "Utilities", icon: <Zap size={16} /> },
-    { value: "internet", label: "Internet", icon: <Wifi size={16} /> },
-    { value: "credit", label: "Credit Card", icon: <CreditCard size={16} /> },
-    { value: "rent", label: "Rent", icon: <House size={16} /> },
-    { value: "insurance", label: "Insurance", icon: <Car size={16} /> },
+    { value: "technology", label: "Technology", icon: <Laptop size={16} /> },
+    { value: "travel", label: "Travel", icon: <Plane size={16} /> },
+    { value: "education", label: "Education", icon: <GraduationCap size={16} /> },
+    { value: "emergency", label: "Emergency Fund", icon: <ShieldAlert size={16} /> },
+    { value: "business", label: "Business", icon: <Handshake size={16} /> },
+    { value: "home", label: "Home", icon: <House size={16} /> },
   ];
 
   const handleCategorySelect = (category) => {
@@ -39,30 +40,30 @@ export default function AddBill({ onCancel }) {
     <form className="mt-6 bg-white shadow-md rounded-lg p-5">
       <div className="">
         <div className="flex items-center gap-2">
-          <PlusCircle className="text-violet-600" />
-          <h1 className="text-2xl font-medium">Add New Bill</h1>
+          <PlusCircle className="text-orange-600" />
+          <h1 className="text-2xl font-medium">Add New Goal</h1>
         </div>
-        <p className="text-gray-500">Set up a reminder for your upcoming bill</p>
+        <p className="text-gray-500">Set a new savings target to work towards</p>
       </div>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 mb-2 mt-6">
         <div className="flex-col">
           <label htmlFor="bill_name" className="font-medium">
-            Bill Name
+            Goal Name
           </label>
           <input
             required
             type="text"
             name="bill_name"
             id="bill_name"
-            placeholder="example: Electric Bill"
-            className="border px-3 py-2 w-full rounded-md"
+            placeholder="example: New Laptop"
+            className="border border-black px-3 py-2 w-full rounded-md"
           />
         </div>
 
         <div className="flex-col">
           <label htmlFor="amount" className="font-medium">
-            Amount (₱)
+            Target Amount (₱)
           </label>
           <input
             required
@@ -70,7 +71,7 @@ export default function AddBill({ onCancel }) {
             name="amount"
             id="amount"
             placeholder="0.00"
-            className="border px-3 py-2 w-full rounded-md"
+            className="border border-black px-3 py-2 w-full rounded-md"
           />
         </div>
 
@@ -101,7 +102,7 @@ export default function AddBill({ onCancel }) {
               {categories.map((category) => (
                 <li
                   key={category.value}
-                  className="px-3 py-2 text-black hover:text-violet-600 hover:bg-violet-50 rounded-md cursor-pointer flex gap-2 items-center"
+                  className="px-3 py-2 text-black hover:text-orange-600 hover:bg-orange-50 rounded-md cursor-pointer flex gap-2 items-center"
                   onClick={() => handleCategorySelect(category)}
                 >
                   {category.icon}
@@ -114,27 +115,31 @@ export default function AddBill({ onCancel }) {
 
         <div className="flex-col">
           <label htmlFor="date" className="font-medium">
-            Due Date
+            Target Date
           </label>
           <input
             required
             type="date"
             name="date"
             id="date"
-            className="border px-3 py-2 w-full rounded-md"
+            className="border border-black px-3 py-2 w-full rounded-md"
           />
         </div>
       </div>
 
-      <div className="flex items-center gap-4 mt-6 ">
-        <button className="cursor-pointer px-3 py-2 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md hover:bg-violet-700">
+      <div className="flex items-center gap-4 mt-6">
+        <button
+          type="submit"
+          className="cursor-pointer px-3 py-2 flex justify-center items-center gap-2 bg-orange-600 text-white rounded-md hover:bg-orange-700"
+        >
           <Plus className="h-5 w-5" />
-          Add Bill
+          Add Goal
         </button>
 
         <button
           onClick={handleCancel}
-          className="cursor-pointer px-3 py-2 bg-violet-100 rounded-md hover:bg-violet-200"
+          type="button"
+          className="cursor-pointer px-3 py-2 bg-orange-100 rounded-md hover:bg-orange-200"
         >
           Cancel
         </button>

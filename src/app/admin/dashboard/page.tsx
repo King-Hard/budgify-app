@@ -118,12 +118,12 @@ export default function Dashboard() {
             <div className="w-full">
               <div className="flex justify-between items-center">
                 <h1 className="font-medium text-md sm:text-lg">Launch at McDonald's</h1>
-                <p className="text-md sm:text-lg font-bold text-red-600">-₱450</p>
+                <p className="text-md sm:text-lg font-medium text-red-600">-₱450</p>
               </div>
 
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">Today</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">food</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[10px] sm:text-[13px]  font-medium flex items-center">food</p>
               </div>
             </div>
           </div>
@@ -136,12 +136,12 @@ export default function Dashboard() {
             <div className="w-full">
               <div className="flex justify-between items-center">
                 <h1 className="font-medium text-md sm:text-lg">Clothes shopping</h1>
-                <p className="text-md sm:text-lg font-bold text-red-600">-₱1200</p>
+                <p className="text-md sm:text-lg font-medium text-red-600">-₱1200</p>
               </div>
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">1 day ago</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">shopping</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[10px] sm:text-[13px]  font-medium flex items-center">shopping</p>
               </div>
             </div>
           </div>
@@ -154,12 +154,12 @@ export default function Dashboard() {
             <div className="w-full">
               <div className="flex justify-between items-center">
                 <h1 className="font-medium text-md sm:text-lg">Monthly Salary</h1>
-                <p className="text-md sm:text-lg font-bold text-green-600">+₱25,000</p>
+                <p className="text-md sm:text-lg font-medium text-green-600">+₱25,000</p>
               </div>
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">3 days ago</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">salary</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[10px] sm:text-[13px]  font-medium flex items-center">salary</p>
               </div>
             </div>
           </div>
@@ -172,12 +172,12 @@ export default function Dashboard() {
             <div className="w-full">
               <div className="flex justify-between items-center">
                 <h1 className="font-medium text-md sm:text-lg">Capstone Project</h1>
-                <p className="text-md sm:text-lg font-bold text-green-600">+₱10,000</p>
+                <p className="text-md sm:text-lg font-medium text-green-600">+₱10,000</p>
               </div>
               
               <div className="flex justify-between items-center">
                 <h1 className="text-gray-500 text-sm sm:text-base">2 weeks ago</h1>
-                <p className="border border-gray-300 px-2 rounded-full text-[12px] sm:text-[14px] font-medium flex items-center">freelance</p>
+                <p className="border border-gray-300 px-2 rounded-full text-[10px] sm:text-[13px]  font-medium flex items-center">freelance</p>
               </div>
             </div>
           </div>

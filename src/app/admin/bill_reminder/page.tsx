@@ -1,7 +1,7 @@
 "use client";
 
 import AddBill from "@/components/BIllCompo/AddBill";
-import { Bell, Briefcase, Car, CheckCircle, Clock, CreditCard, House, Laptop, Plus, ShoppingCart, Timer, TriangleAlert, Utensils, Wifi, Zap } from "lucide-react";
+import { Bell, Car, CheckCircle, Clock, CreditCard, House, Plus, TriangleAlert, Wifi, Zap } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
 export default function BillReminder() {
@@ -35,7 +35,7 @@ export default function BillReminder() {
             className="flex justify-center items-center gap-2 py-2 px-3 text-white font-medium rounded-md cursor-pointer bg-violet-500 hover:bg-violet-600"
           >
             <Plus className="w-5 h-5 text-white"/>
-            Add Bill
+            New Bill
           </button>
         </div>
       </div>

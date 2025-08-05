@@ -1,4 +1,4 @@
-import { Bell, CirclePlus, DollarSign, LayoutDashboard, Target, TrendingUp, Wallet } from "lucide-react";
+import { Bell, CircleDollarSign, CirclePlus, DollarSign, LayoutDashboard, Target, TrendingUp, Wallet } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -28,7 +28,7 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
           className={`p-3 rounded-md cursor-pointer ${pathName === "/admin/add_budget" ? "bg-yellow-50 text-yellow-600 border border-yellow-500" : "text-black border border-gray-200 hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-500"}`}
           title="Add Transaction"
         >
-          <CirclePlus className="w-5 h-5" />
+          <CircleDollarSign className="w-5 h-5" />
         </Link>
         <Link
           href="/admin/bill_reminder"
@@ -86,8 +86,8 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
             href="/admin/add_budget"
             className="flex items-center gap-3 p-3"
           >
-            <CirclePlus className="w-4 h-4"/>
-            Add Transaction
+            <CircleDollarSign className="w-4 h-4"/>
+            Transaction
           </Link>
         </div>
         <div className={`${pathName === "/admin/bill_reminder" ? "text-violet-600 bg-violet-50 border border-violet-500 font-medium mt-1 rounded-md" : "font-medium mt-1 rounded-md border border-gray-200 hover:text-violet-600 hover:bg-violet-50 hover:border-violet-500"}`}>
