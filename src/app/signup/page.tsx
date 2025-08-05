@@ -91,13 +91,6 @@ export default function Signup() {
           </div>
         </div>
       </div>
-      <div>
-        <h1>HAHAHAHA</h1>
-        <p>HAHAHAHAHA</p>
-        <div>
-          <p>asdbabds</p>
-        </div>
-      </div>
     </form>
   );
 };
