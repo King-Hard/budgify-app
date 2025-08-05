@@ -94,6 +94,9 @@ export default function Signup() {
       <div>
         <h1>HAHAHAHA</h1>
         <p>HAHAHAHAHA</p>
+        <div>
+          
+        </div>
       </div>
     </form>
   );
