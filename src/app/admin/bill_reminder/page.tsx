@@ -1,7 +1,19 @@
 "use client";
 
 import AddBill from "@/components/BIllCompo/AddBill";
-import { Bell, Car, CheckCircle, Clock, CreditCard, House, Plus, TriangleAlert, Wifi, Zap } from "lucide-react";
+import { 
+  Banknote, 
+  Bell, 
+  CheckCircle, 
+  Clock, 
+  House, 
+  Plus, 
+  TriangleAlert, 
+  Tv, 
+  Wifi, 
+  Zap 
+} from "lucide-react";
+
 import { useState, useRef, useEffect } from "react";
 
 export default function BillReminder() {
@@ -165,12 +177,12 @@ export default function BillReminder() {
 
           <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-slate-50">
             <div>
-              <CreditCard className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
+              <Banknote className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
 
             <div className="w-full">
               <div className="flex justify-between items-center">
-                <h1 className="font-medium text-md sm:text-lg">Credit Card</h1>
+                <h1 className="font-medium text-md sm:text-lg">Loan Payment</h1>
                 <p className="text-md sm:text-lg font-bold">₱5,000</p>
               </div>
               
@@ -217,13 +229,13 @@ export default function BillReminder() {
 
           <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-slate-50">
             <div>
-              <Car className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
+              <Tv className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
 
             <div className="w-full">
               <div className="flex justify-between items-center">
-                <h1 className="font-medium text-md sm:text-lg">Insurance</h1>
-                <p className="text-md sm:text-lg font-bold">₱5,000</p>
+                <h1 className="font-medium text-md sm:text-lg">Netflix</h1>
+                <p className="text-md sm:text-lg font-bold">₱300</p>
               </div>
               
               <div className="flex justify-between items-center">

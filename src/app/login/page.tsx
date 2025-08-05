@@ -61,7 +61,7 @@ export default function Login() {
           <button 
             type="submit"
             disabled={isLoading}
-            className="w-full text-center border py-3 px-4 text-white font-medium bg-black"
+            className="w-full text-center border py-3 px-4 text-white font-medium bg-black cursor-pointer"
           >
             {isLoading ? "Loading..." : "Log In"}
           </button>

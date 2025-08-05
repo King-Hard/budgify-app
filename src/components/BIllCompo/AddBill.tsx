@@ -1,13 +1,15 @@
 "use client";
 
 import {
-  Car,
+  Banknote,
   ChevronDown,
   ChevronUp,
-  CreditCard,
+  Droplet,
   House,
   Plus,
   PlusCircle,
+  School,
+  Tv,
   Wifi,
   Zap,
 } from "lucide-react";
@@ -19,11 +21,13 @@ export default function AddBill({ onCancel }) {
   const [open, setOpen] = useState(false);
 
   const categories = [
-    { value: "utilities", label: "Utilities", icon: <Zap size={16} /> },
+    { value: "electricity", label: "Electricity ", icon: <Zap size={16} /> },
+    { value: "water", label: "Water ", icon: <Droplet size={16} /> },
     { value: "internet", label: "Internet", icon: <Wifi size={16} /> },
-    { value: "credit", label: "Credit Card", icon: <CreditCard size={16} /> },
     { value: "rent", label: "Rent", icon: <House size={16} /> },
-    { value: "insurance", label: "Insurance", icon: <Car size={16} /> },
+    { value: "loan", label: "Loan Payment", icon: <Banknote size={16} /> },
+    { value: "tuition", label: "Tuition Fee", icon: <School size={16} /> },
+    { value: "subscription", label: "Subsciption", icon: <Tv size={16} /> },
   ];
 
   const handleCategorySelect = (category) => {

@@ -76,7 +76,7 @@ export default function Signup() {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full text-center border py-3 px-4 text-white font-medium bg-black"
+            className="w-full text-center border py-3 px-4 text-white font-medium bg-black cursor-pointer"
           >
             {isLoading ? "Loading..." : "Sign Up"}
           </button>
@@ -90,6 +90,9 @@ export default function Signup() {
             </Link>
           </div>
         </div>
+      </div>
+      <div>
+        
       </div>
     </form>
   );
