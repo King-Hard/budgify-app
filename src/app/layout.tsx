@@ -34,14 +34,6 @@ export default function Rootlayout({children} : {children: ReactNode}){
               </div>
             </div>
 
-              <div>
-                <h1>HAHAHAHHAA</h1>
-                <p>JNAFJNAJEFNJEDE</p>
-              </div>
-              <div>
-                
-              </div>
-
             {/* Scrollable content */}
             <div className="flex-1 overflow-y-auto hide-scrollbar bg-gray-50">
               {children}
