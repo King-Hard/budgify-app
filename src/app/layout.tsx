@@ -35,7 +35,7 @@ export default function Rootlayout({children} : {children: ReactNode}){
             </div>
 
               <div>
-                <h1></h1>
+                <h1>HAHAHAHHAA</h1>
               </div>
 
             {/* Scrollable content */}
