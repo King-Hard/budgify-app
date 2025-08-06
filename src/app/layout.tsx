@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ReactNode } from "react";
 import "./globals.css";
+import { ReactNode } from "react";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
   description: "Track your expenses and manage your budget",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function Rootlayout({children} : {children: ReactNode}){
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 min-h-screen`}>
@@ -32,6 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <div className="w-3 h-3 rounded-full"></div>
               </div>
             </div>
+
+              
 
             {/* Scrollable content */}
             <div className="flex-1 overflow-y-auto hide-scrollbar bg-gray-50">
