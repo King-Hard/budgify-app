@@ -1,8 +1,12 @@
 "use client";
 import AddExpense from "@/components/transactionsCompo/AddExpense";
 import AddIncome from "@/components/transactionsCompo/AddIncome";
-import { PlusCircle, MinusCircle, CircleDollarSign } from "lucide-react";
 import { useState } from "react";
+import { 
+  PlusCircle, 
+  MinusCircle, 
+  CircleDollarSign, 
+} from "lucide-react";
 
 export default function AddBudget() {
   const [transaction, setTransaction] = useState(true);

@@ -4,14 +4,9 @@ import Sidebar from "@/components/AdminCompo/Sidebar";
 import ProfileDropdown from "@/components/ProfileDropdown";
 import { Columns2 } from "lucide-react";
 import { useState, useEffect } from "react";
+import { ReactNode } from "react";
 
-export default function AdminLayoutClient({
-  children,
-  email,
-}: {
-  children: React.ReactNode;
-  email: string;
-}) {
+export default function AdminLayoutClient({children, email,}: {children: ReactNode; email: string;}) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 

@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { logout } from "@/lib/controllers/authentication";
+import { LogOut } from "lucide-react";
 
 export default function ProfileDropdown({ email }: { email: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +42,9 @@ export default function ProfileDropdown({ email }: { email: string }) {
           <button
             onClick={handleLogout}
             role="menuitem"
-            className="block w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-50 hover:text-red-600 transition-colors cursor-pointer"
+            className="flex items-center gap-1 w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-50 hover:text-red-600 transition-colors cursor-pointer"
           >
+            <LogOut className="w-4 h-4"/>
             Sign out
           </button>
         </div>

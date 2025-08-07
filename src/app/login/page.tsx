@@ -9,9 +9,9 @@ export default function Login() {
 
   return (
     <form 
-      
+
       action={action}
-      className="flex justify-center items-center min-h-dvh bg-slate-100"
+      className="flex justify-center items-center min-h-dvh bg-gray-100"
     >
       <div className="w-90 sm:w-100 border p-5 bg-white rounded-sm shadow-[-6px_6px_0px_#000000]">
         <div className="text-center">

@@ -130,17 +130,17 @@ export default function AddBill({ onCancel }) {
         </div>
       </div>
 
-      <div className="flex items-center gap-4 mt-6 ">
-        <button className="cursor-pointer px-3 py-2 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md hover:bg-violet-700">
-          <Plus className="h-5 w-5" />
-          Add Bill
-        </button>
-
+      <div className="flex items-center gap-2 mt-6 ">
         <button
           onClick={handleCancel}
-          className="cursor-pointer px-3 py-2 bg-violet-100 rounded-md hover:bg-violet-200"
+          className="cursor-pointer px-3 py-2 w-30 bg-violet-100 rounded-md hover:bg-violet-200"
         >
           Cancel
+        </button>
+
+        <button className="cursor-pointer px-3 py-2 w-30 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md hover:bg-violet-700">
+          <Plus className="h-5 w-5" />
+          Add Bill
         </button>
       </div>
     </form>

@@ -111,18 +111,18 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
         <div className="pt-9 pl-3">
           <h1 className="text-gray-500 text-sm font-semibold">QUICK STATS</h1>
         </div>
-        <div className="pt-4 ">
-          <div className="border border-green-400 rounded-md p-2 bg-green-50">
-            <div className="flex items-center text-sm font-semibold gap-2 text-green-600">
+        <div className="pt-4">
+          <div className="border border-green-400 rounded-md py-2 px-4 bg-green-50">
+            <div className="flex items-center text-sm font-semibold gap-2 mb-1 text-green-600">
               <TrendingUp className="w-4 h-4"/>
               <p>Income</p>
             </div>
-            <h1 className="font-bold text-lg">₱25,000</h1>
+            <h1 className="font-bold text-lg ">₱25,000</h1>
           </div>
         </div>
-        <div className="pt-2 ">
-          <div className="border border-red-400 rounded-md p-2 bg-red-50">
-            <div className="flex items-center text-sm font-semibold gap-2 text-red-600">
+        <div className="pt-2">
+          <div className="border border-red-400 rounded-md py-2 px-4 bg-red-50">
+            <div className="flex items-center text-sm font-semibold gap-2 mb-1 text-red-600">
               <DollarSign className="w-4 h-4"/>
               <p>Expenses</p>
             </div>

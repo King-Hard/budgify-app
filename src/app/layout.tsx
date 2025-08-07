@@ -16,22 +16,11 @@ export default function Rootlayout({children} : {children: ReactNode}){
     <html lang="en">
       <body className={`${inter.className} bg-gray-50 min-h-screen`}>
         {/* Outer wrapper for margin and centering */}
-        <div className="mb-0 mt-3 mr-3 ml-3 flex justify-center items-center">
+        <div className="mb-0 mt-0 mr-0 ml-0 flex justify-center items-center">
           {/* Main container with visible full border */}
-          <div className="w-full max-w-[1550px] h-[calc(100vh-24px)] border rounded-t-md bg-gray-50 shadow flex flex-col overflow-hidden">
-            {/* Mac window style header */}
-            <div className="flex justify-between items-center border-b p-1.5 rounded-t-md">
-              <div className="flex gap-2 items-center">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
+          <div className="w-full max-w-[1550px] h-[calc(103.5vh-24px)] bg-gray-50 shadow flex flex-col overflow-hidden">
+            <div className="flex justify-center items-center border-b p-1.5 rounded-t-md">
               <h1 className="text-[14px] font-bold">Budgify</h1>
-              <div className="flex gap-2 items-center invisible">
-                <div className="w-3 h-3 rounded-full"></div>
-                <div className="w-3 h-3 rounded-full"></div>
-                <div className="w-3 h-3 rounded-full"></div>
-              </div>
             </div>
 
             {/* Scrollable content */}

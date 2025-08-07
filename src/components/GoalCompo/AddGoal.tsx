@@ -129,19 +129,19 @@ export default function AddGoal({ onCancel }) {
 
       <div className="flex items-center gap-4 mt-6">
         <button
-          type="submit"
-          className="cursor-pointer px-3 py-2 flex justify-center items-center gap-2 bg-orange-600 text-white rounded-md hover:bg-orange-700"
-        >
-          <Plus className="h-5 w-5" />
-          Add Goal
-        </button>
-
-        <button
           onClick={handleCancel}
           type="button"
           className="cursor-pointer px-3 py-2 bg-orange-100 rounded-md hover:bg-orange-200"
         >
           Cancel
+        </button>
+
+        <button
+          type="submit"
+          className="cursor-pointer px-3 py-2 flex justify-center items-center gap-2 bg-orange-600 text-white rounded-md hover:bg-orange-700"
+        >
+          <Plus className="h-5 w-5" />
+          Add Goal
         </button>
       </div>
     </form>

@@ -116,7 +116,7 @@ export default function BillReminder() {
             <input 
               type="month" 
               ref={monthRef} 
-              className="px-2 py-1 rounded-md text-sm sm:text-base bg-slate-50"
+              className="px-2 py-1 rounded-md text-sm sm:text-base bg-slate-50 cursor-pointer"
             />
           </div>
           <p className="text-sm sm:text-base text-gray-500">Manage your recurring payments and reminders</p>
@@ -149,7 +149,7 @@ export default function BillReminder() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-slate-50">
+          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-gray-50">
             <div>
               <Wifi className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
@@ -175,7 +175,7 @@ export default function BillReminder() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-slate-50">
+          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-gray-50">
             <div>
               <Banknote className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
@@ -201,7 +201,7 @@ export default function BillReminder() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-slate-50">
+          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-gray-50">
             <div>
               <House className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
@@ -227,7 +227,7 @@ export default function BillReminder() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-slate-50">
+          <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-gray-50">
             <div>
               <Tv className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
             </div>
