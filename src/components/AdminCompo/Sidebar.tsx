@@ -62,9 +62,9 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
   return (
     <div className="border-r border-gray-200 flex flex-col w-[256px] h-full">
       <div className="p-5 flex items-center gap-3 border-b border-gray-200">
-        <Wallet className="rounded-md w-10 h-10 p-2 text-white bg-[#3786F2]"/>
+        <Wallet className="rounded-md w-10 h-10 p-2 text-white bg-blue-600"/>
         <div>
-          <h1 className="text-xl font-bold text-[#3786F2]">Budgify</h1>
+          <h1 className="text-xl font-bold text-blue-600">Budgify</h1>
           <p className="text-[12px] text-gray-500">Smart budgeting made simple</p>
         </div>
       </div>

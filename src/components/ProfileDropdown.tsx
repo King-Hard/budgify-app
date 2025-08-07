@@ -4,7 +4,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { logout } from "@/lib/controllers/authentication";
-import { LogOut } from "lucide-react";
+import { LogOut, Mail } from "lucide-react";
 
 export default function ProfileDropdown({ email }: { email: string }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,16 +36,17 @@ export default function ProfileDropdown({ email }: { email: string }) {
           aria-orientation="vertical"
           className="py-1 absolute right-0 mt-2.5 w-48 bg-white rounded-md shadow-lg z-50 border border-gray-200"
         >
-          <div className="px-4 py-2 border-b" role="none">
+          <div className="flex items-center gap-1 px-4 py-2 border-b" role="none">
+            <Mail className="w-4 h-4"/>
             <p className="text-sm font-medium truncate" role="status">{email}</p>
           </div>
           <button
             onClick={handleLogout}
             role="menuitem"
-            className="flex items-center gap-1 w-full text-left px-4 py-2 text-sm text-black hover:bg-gray-50 hover:text-red-600 transition-colors cursor-pointer"
+            className="flex items-center gap-1 w-full text-left px-4 py-2 text-sm font-medium text-black hover:bg-gray-50 hover:text-red-600 transition-colors cursor-pointer"
           >
             <LogOut className="w-4 h-4"/>
-            Sign out
+            Log out
           </button>
         </div>
       )}
