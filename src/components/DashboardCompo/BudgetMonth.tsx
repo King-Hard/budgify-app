@@ -19,6 +19,9 @@ export default function BudgetMonth() {
         <div>
           <h1>JASIJDOAJDO</h1>
           <p>asdainidsad</p>
+          <div>
+            
+          </div>
         </div>
       </div>
 
