@@ -15,16 +15,6 @@ export default function BudgetMonth() {
         <SquarePen className="w-5 h-5"/>
       </button>
 
-      <div>
-        <div>
-          <h1>JASIJDOAJDO</h1>
-          <p>asdainidsad</p>
-          <div>
-            
-          </div>
-        </div>
-      </div>
-
       {edit ? (
         <form className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-30 z-50">
           <div className="bg-white p-5 rounded-md shadow border border-blue-300 shadow-blue-200">
