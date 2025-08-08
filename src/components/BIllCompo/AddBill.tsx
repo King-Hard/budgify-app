@@ -1,5 +1,6 @@
 "use client";
 
+import { bill } from "@/lib/controllers/billAuth";
 import {
   Banknote,
   ChevronDown,
@@ -14,11 +15,19 @@ import {
   Zap,
 } from "lucide-react";
 
-import { useState } from "react";
+import { useActionState, useState, useEffect } from "react";
 
 export default function AddBill({ onCancel }) {
+  const [state, action] = useActionState(bill, undefined);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (state && !state.errors && !state.amount && !state.description) {
+      setSelectedCategory(null);
+      setOpen(false);
+    }
+  }, [state]);
 
   const categories = [
     { value: "electricity", label: "Electricity ", icon: <Zap size={16} /> },
@@ -40,7 +49,10 @@ export default function AddBill({ onCancel }) {
   };
 
   return (
-    <form className="mt-6 bg-white shadow-md rounded-lg p-5">
+    <form 
+      action={action}
+      className="mt-6 bg-white shadow-md rounded-lg p-5"
+    >
       <div className="">
         <div className="flex items-center gap-2">
           <PlusCircle className="text-violet-600" />
@@ -48,34 +60,42 @@ export default function AddBill({ onCancel }) {
         </div>
         <p className="text-gray-500">Set up a reminder for your upcoming bill</p>
       </div>
-
+      
       <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-5 mb-2 mt-6">
         <div className="flex-col">
-          <label htmlFor="bill_name" className="font-medium">
+          <label className="font-medium">
             Bill Name
           </label>
           <input
+            defaultValue={state?.bill}
             required
             type="text"
-            name="bill_name"
-            id="bill_name"
+            name="bill"
             placeholder="example: Electric Bill"
             className="border px-3 py-2 w-full rounded-md"
           />
+
+          {state?.errors?.bill && (
+            <p className="text-sm">{state.errors.bill}</p>
+          )}
         </div>
 
         <div className="flex-col">
-          <label htmlFor="amount" className="font-medium">
+          <label className="font-medium">
             Amount (₱)
           </label>
           <input
+            defaultValue={state?.amount}
             required
             type="number"
             name="amount"
-            id="amount"
             placeholder="0.00"
             className="border px-3 py-2 w-full rounded-md"
           />
+
+          {state?.errors?.amount && (
+            <p className="text-sm">{state.errors.amount}</p>
+          )}
         </div>
 
         <div className="relative">
@@ -114,33 +134,54 @@ export default function AddBill({ onCancel }) {
               ))}
             </ul>
           )}
+
+          {selectedCategory && (
+            <input
+              type="hidden"
+              name="category"
+              value={selectedCategory.value}
+            />
+          )}
+
+          {state?.errors?.category && (
+            <p className="text-sm">{state.errors.category}</p>
+          )}
         </div>
 
         <div className="flex-col">
-          <label htmlFor="date" className="font-medium">
+          <label className="font-medium">
             Due Date
           </label>
           <input
+            defaultValue={state?.date}
             required
             type="date"
             name="date"
-            id="date"
             className="border px-3 py-2 w-full rounded-md"
           />
+
+          {state?.errors?.date && (
+            <p className="text-sm">{state.errors.date}</p>
+          )}
         </div>
       </div>
 
       <div className="flex items-center gap-2 mt-6 ">
         <button
+          type="button"
           onClick={handleCancel}
           className="cursor-pointer px-3 py-2 w-30 bg-violet-100 rounded-md hover:bg-violet-200"
         >
           Cancel
         </button>
 
-        <button className="cursor-pointer px-3 py-2 w-30 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md hover:bg-violet-700">
-          <Plus className="h-5 w-5" />
-          Add Bill
+        <button 
+          className="disabled:opacity-50 cursor-pointer px-3 py-2 w-30 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md"
+          type="submit"
+          disabled={!selectedCategory}
+        >
+          <Plus className="h-5 w-5"/>
+          Add Bil
         </button>
       </div>
     </form>

@@ -27,13 +27,14 @@ export async function expense(state, formData) {
     const expense = {
       userId: session.userId, // track user
       email: session.email,  
+      name: "Expense",
       amount: validatedFields.data.amount,
       category: validatedFields.data.category,
       description: validatedFields.data.description,
       createdAt: new Date(),
     };
     await postCollection?.insertOne(expense);
-    return { success: true };
+    return {success: true};
   } 
   catch (error) {
     return {
@@ -64,7 +65,8 @@ export async function income (state, formData) {
     const postCollection = await getCollection("transactions");
     const income = {
       userId: session.userId, // track user
-      email: session.email,   
+      email: session.email,  
+      name: "Income",
       amount: validatedFields.data.amount,
       category: validatedFields.data.category,
       description: validatedFields.data.description,
@@ -78,5 +80,4 @@ export async function income (state, formData) {
       errors: {general: error.message}
     };
   };
-
 };
