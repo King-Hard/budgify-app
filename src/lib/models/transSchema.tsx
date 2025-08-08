@@ -5,7 +5,8 @@ export const ExpenseSchema = z
     amount: z 
       .string()
       .trim()
-      .transform((val) => Number(val)),
+      .transform((val) => Number(val))
+      .refine((val) => val > 0, "Amount must be greater than 0"),
 
     category: z 
       .string()
@@ -22,7 +23,8 @@ export const IncomeSchema = z
     amount: z 
       .string()
       .trim()
-      .transform((val) => Number(val)),
+      .transform((val) => Number(val))
+      .refine((val) => val > 0, "Amount must be greater than 0"),
 
     category: z 
       .string()
