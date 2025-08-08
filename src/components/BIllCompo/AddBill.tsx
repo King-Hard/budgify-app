@@ -135,6 +135,8 @@ export default function AddBill({ onCancel }) {
             </ul>
           )}
 
+          <div></div>
+
           {selectedCategory && (
             <input
               type="hidden"
