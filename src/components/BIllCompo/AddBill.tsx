@@ -135,7 +135,9 @@ export default function AddBill({ onCancel }) {
             </ul>
           )}
 
-          <div></div>
+          <div>
+            <h1></h1>
+          </div>
 
           {selectedCategory && (
             <input
