@@ -76,7 +76,7 @@ export default function AddBill({ onCancel }) {
           />
 
           {state?.errors?.bill && (
-            <p className="text-sm">{state.errors.bill}</p>
+            <p className="text-sm  text-red-600">{state.errors.bill}</p>
           )}
         </div>
 
@@ -94,7 +94,7 @@ export default function AddBill({ onCancel }) {
           />
 
           {state?.errors?.amount && (
-            <p className="text-sm">{state.errors.amount}</p>
+            <p className="text-sm  text-red-600">{state.errors.amount}</p>
           )}
         </div>
 
@@ -144,7 +144,7 @@ export default function AddBill({ onCancel }) {
           )}
 
           {state?.errors?.category && (
-            <p className="text-sm">{state.errors.category}</p>
+            <p className="text-sm text-red-600">{state.errors.category}</p>
           )}
         </div>
 
@@ -161,7 +161,7 @@ export default function AddBill({ onCancel }) {
           />
 
           {state?.errors?.date && (
-            <p className="text-sm">{state.errors.date}</p>
+            <p className="text-sm  text-red-600">{state.errors.date}</p>
           )}
         </div>
       </div>
@@ -176,7 +176,7 @@ export default function AddBill({ onCancel }) {
         </button>
 
         <button 
-          className="disabled:opacity-50 cursor-pointer px-3 py-2 w-30 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md"
+          className="disabled:opacity-50 cursor-pointer px-3 py-2 w-30 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md transition-all duration-300"
           type="submit"
           disabled={!selectedCategory}
         >

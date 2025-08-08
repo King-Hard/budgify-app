@@ -4,6 +4,7 @@ export const BillSchema = z
   .object({
     bill: z 
       .string()
+      .max(20, {message: "Max of 20 characters only."})
       .trim(),
 
     amount: z 

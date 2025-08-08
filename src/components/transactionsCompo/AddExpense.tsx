@@ -57,7 +57,7 @@ export default function AddExpense() {
         />
 
         {state?.errors?.amount && (
-          <p className="text-sm">{state.errors.amount}</p>
+          <p className="text-sm text-red-600 mt-1">{state.errors.amount}</p>
         )}
       </div>
 
@@ -105,7 +105,7 @@ export default function AddExpense() {
         )}
 
         {state?.errors?.category && (
-          <p className="text-sm">{state.errors.category}</p>
+          <p className="text-sm text-red-600 mt-1">{state.errors.category}</p>
         )}
       </div>
 
@@ -123,13 +123,13 @@ export default function AddExpense() {
         />
 
         {state?.errors?.description && (
-          <p className="text-sm">{state.errors.description}</p>
+          <p className="text-sm text-red-600 ">{state.errors.description}</p>
         )}
       </div>
 
       <div className="mt-8 text-white">
         <button 
-          className="disabled:opacity-50 rounded-md p-3 w-full flex items-center justify-center gap-2 bg-red-600 cursor-pointer " 
+          className="disabled:opacity-50 rounded-md p-3 w-full flex items-center justify-center gap-2 bg-red-600 cursor-pointer transition-all duration-300" 
           type="submit"
           disabled={!selectedCategory}
         >

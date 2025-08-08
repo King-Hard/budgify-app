@@ -40,12 +40,12 @@ export default function AddIncome() {
   return (
     <form action={action}>
       <div className="mb-4">
-        <label htmlFor="amount" className="font-medium">
+        <label className="font-medium">
           Amount (₱)
         </label>
         <input
+          defaultValue={state?.amount}
           required
-          id="amount"
           name="amount"
           type="number"
           className="w-full border rounded-md p-2.5 px-3"
@@ -53,7 +53,7 @@ export default function AddIncome() {
         />
 
         {state?.errors?.amount && (
-          <p className="text-sm">{state.errors.amount}</p>
+          <p className="text-sm text-red-600 mt-1">{state.errors.amount}</p>
         )}
       </div>
 
@@ -101,31 +101,31 @@ export default function AddIncome() {
         )}
 
         {state?.errors?.category && (
-          <p className="text-sm">{state.errors.category}</p>
+          <p className="text-sm text-red-600 mt-1">{state.errors.category}</p>
         )}
       </div>
 
       <div className="mb-4">
-        <label htmlFor="description" className="font-medium">
+        <label className="font-medium">
           Description
         </label>
         <textarea
+          defaultValue={state?.description}
           required
           placeholder="Describe your income source"
-          id="description"
           name="description"
           rows={3}
           className="w-full border rounded-md p-3"
         />
 
         {state?.errors?.description && (
-          <p className="text-sm">{state.errors.description}</p>
+          <p className="text-sm text-red-600">{state.errors.description}</p>
         )}
       </div>
 
       <div className="mt-8 text-white">
         <button 
-          className="disabled:opacity-50 rounded-md p-3 w-full flex items-center justify-center gap-2 bg-green-600 cursor-pointer"
+          className="disabled:opacity-50 rounded-md p-3 w-full flex items-center justify-center gap-2 bg-green-600 cursor-pointer transition-all duration-300"
           type="submit"
           disabled={!selectedCategory}
         >
