@@ -1,5 +1,6 @@
 "use client";
 
+import { expense } from "@/lib/controllers/transAuth";
 import {
   Car,
   ChevronDown,
@@ -12,11 +13,19 @@ import {
   Utensils,
 } from "lucide-react";
 
-import { useState } from "react";
+import { useActionState, useState, useEffect } from "react";
 
 export default function AddExpense() {
+  const [state, action] = useActionState(expense, undefined);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (state && !state.errors && !state.amount && !state.description) {
+      setSelectedCategory(null);
+      setOpen(false);
+    }
+  }, [state]);
 
   const categories = [
     { value: "food", label: "Food and Dining", icon: <Utensils size={16} /> },
@@ -33,19 +42,23 @@ export default function AddExpense() {
   };
 
   return (
-    <form>
+    <form action={action}>
       <div className="mb-4">
-        <label htmlFor="amount" className="font-medium">
+        <label className="font-medium">
           Amount (₱)
         </label>
         <input
+        defaultValue={state?.amount}
           required
-          id="amount"
           name="amount"
           type="number"
           className="w-full border rounded-md p-2.5 px-3"
           placeholder="0.00"
         />
+
+        {state?.errors?.amount && (
+          <p className="text-sm">{state.errors.amount}</p>
+        )}
       </div>
 
       <div className="relative mb-4">
@@ -82,29 +95,46 @@ export default function AddExpense() {
             ))}
           </ul>
         )}
+
+        {selectedCategory && (
+          <input
+            type="hidden"
+            name="category"
+            value={selectedCategory.value}
+          />
+        )}
+
+        {state?.errors?.category && (
+          <p className="text-sm">{state.errors.category}</p>
+        )}
       </div>
 
       <div className="mb-4">
-        <label htmlFor="description" className="font-medium">
+        <label className="font-medium">
           Description
         </label>
         <textarea
+          defaultValue={state?.description}
           required
           placeholder="What did you spend on?"
-          id="description"
           name="description"
           rows={3}
           className="w-full border rounded-md p-3"
         />
+
+        {state?.errors?.description && (
+          <p className="text-sm">{state.errors.description}</p>
+        )}
       </div>
 
       <div className="mt-8 text-white">
         <button 
-          className="rounded-md p-3 w-full flex items-center justify-center gap-2 bg-red-600 cursor-pointer hover:bg-red-700" 
+          className="disabled:opacity-50 rounded-md p-3 w-full flex items-center justify-center gap-2 bg-red-600 cursor-pointer " 
           type="submit"
+          disabled={!selectedCategory}
         >
           <MinusCircle className="w-5 h-5"/>
-          Add Expense
+          {selectedCategory ? "Add Expense" : "Select a category to enable this button"}
         </button>
       </div>
     </form>

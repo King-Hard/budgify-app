@@ -1,5 +1,6 @@
 "use client";
 
+import { income } from "@/lib/controllers/transAuth";
 import {
   Briefcase,
   ChevronDown,
@@ -10,12 +11,20 @@ import {
   SquaresExclude,
 } from "lucide-react";
 
-import { useState } from "react";
+import { useActionState, useState, useEffect } from "react";
 
 export default function AddIncome() {
+  const [state, action] = useActionState(income, undefined);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (state && !state.errors && !state.amount && !state.description) {
+      setSelectedCategory(null);
+      setOpen(false);
+    }
+  }, [state]);
+  
   const categories = [
     { value: "salary", label: "Salary", icon: <Briefcase size={16} /> },
     { value: "freelance", label: "Freelance", icon: <Laptop size={16} /> },
@@ -29,7 +38,7 @@ export default function AddIncome() {
   };
 
   return (
-    <form>
+    <form action={action}>
       <div className="mb-4">
         <label htmlFor="amount" className="font-medium">
           Amount (₱)
@@ -42,6 +51,10 @@ export default function AddIncome() {
           className="w-full border rounded-md p-2.5 px-3"
           placeholder="0.00"
         />
+
+        {state?.errors?.amount && (
+          <p className="text-sm">{state.errors.amount}</p>
+        )}
       </div>
 
       <div className="relative mb-4">
@@ -78,6 +91,18 @@ export default function AddIncome() {
             ))}
           </ul>
         )}
+
+        {selectedCategory && (
+          <input
+            type="hidden"
+            name="category"
+            value={selectedCategory.value}
+          />
+        )}
+
+        {state?.errors?.category && (
+          <p className="text-sm">{state.errors.category}</p>
+        )}
       </div>
 
       <div className="mb-4">
@@ -92,15 +117,20 @@ export default function AddIncome() {
           rows={3}
           className="w-full border rounded-md p-3"
         />
+
+        {state?.errors?.description && (
+          <p className="text-sm">{state.errors.description}</p>
+        )}
       </div>
 
       <div className="mt-8 text-white">
         <button 
-          className="rounded-md p-3 w-full flex items-center justify-center gap-2 bg-green-600 cursor-pointer hover:bg-green-700"
+          className="disabled:opacity-50 rounded-md p-3 w-full flex items-center justify-center gap-2 bg-green-600 cursor-pointer"
           type="submit"
+          disabled={!selectedCategory}
         >
           <PlusCircle className="w-5 h-5"/>
-          Add Income
+          {selectedCategory ? "Add Income" : "Select a category to enable this button"}
         </button>
       </div>
     </form>
