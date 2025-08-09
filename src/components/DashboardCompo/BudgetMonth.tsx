@@ -1,6 +1,6 @@
 "use client";
 
-import { Pencil, SquarePen, Wallet } from "lucide-react";
+import { SquarePen, Wallet } from "lucide-react";
 import { useState } from "react";
 
 export default function BudgetMonth() {
@@ -10,16 +10,10 @@ export default function BudgetMonth() {
     <div className="flex">
       <button
         onClick={() => setEdit(true)}
-        className="p-1 bg-gray-100 rounded-sm text-black cursor-pointer transition-shadow duration-300 hover:bg-white hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
+        className="p-1 bg-gray-100 rounded-sm cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
       >
         <SquarePen className="w-5 h-5 text-slate-800"/>
       </button>
-
-      <div>
-        <h1>SAHDIUAhds</h1>
-        <p>asdnkajds</p>
-        <div>asdadas<h1></h1></div>
-      </div>
 
       {edit ? (
         <form className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-30 z-50 transition-all duration-500">

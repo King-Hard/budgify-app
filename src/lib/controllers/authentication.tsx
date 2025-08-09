@@ -44,7 +44,7 @@ export async function signup(state, formData) {
 
   await createSession(result.insertedId.toString(), email);
 
-  return redirect("/admin/dashboard");
+  return redirect("/budgify/dashboard");
 };
 
 export async function login(state, formData) {
@@ -81,7 +81,7 @@ export async function login(state, formData) {
 
   await createSession(existingUser._id.toString(), existingUser.email);
 
-  return redirect("/admin/dashboard");
+  return redirect("/budgify/dashboard");
 };
 
 export async function logout() {

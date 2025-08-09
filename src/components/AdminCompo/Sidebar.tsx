@@ -17,8 +17,8 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
         </div>
         <div className="flex flex-col items-center py-5 space-y-2">
           <Link
-            href="/admin/dashboard"
-            className={`p-3 rounded-md cursor-pointer ${pathName === "/admin/dashboard" 
+            href="/budgify/dashboard"
+            className={`p-3 rounded-md cursor-pointer ${pathName === "/budgify/dashboard" 
               ? "bg-blue-50 text-blue-600 border border-blue-500" 
               : "text-black border border-gray-200 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-500 transition-colors duration-200"}`}
             title="Dashboard"
@@ -26,8 +26,8 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
             <LayoutDashboard className="w-5 h-5" />
           </Link>
           <Link
-            href="/admin/add_budget"
-            className={`p-3 rounded-md cursor-pointer ${pathName === "/admin/add_budget" 
+            href="/budgify/budget"
+            className={`p-3 rounded-md cursor-pointer ${pathName === "/budgify/budget" 
               ? "bg-yellow-50 text-yellow-600 border border-yellow-500" 
               : "text-black border border-gray-200 hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-500 transition-colors duration-200"}`}
             title="Add Transaction"
@@ -35,8 +35,8 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
             <CircleDollarSign className="w-5 h-5" />
           </Link>
           <Link
-            href="/admin/bill_reminder"
-            className={`p-3 rounded-md cursor-pointer ${pathName === "/admin/bill_reminder" 
+            href="/budgify/bill"
+            className={`p-3 rounded-md cursor-pointer ${pathName === "/budgify/bill" 
               ? "bg-violet-50 text-violet-600 border border-violet-500" 
               : "text-black border border-gray-200 hover:text-violet-600 hover:bg-violet-50 hover:border-violet-500 transition-colors duration-200"}`}
             title="Bill Reminder"
@@ -44,8 +44,8 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
             <Bell className="w-5 h-5" />
           </Link>
           <Link
-            href="/admin/goal_tracker"
-            className={`p-3 rounded-md cursor-pointer ${pathName === "/admin/goal_tracker" 
+            href="/budgify/goal"
+            className={`p-3 rounded-md cursor-pointer ${pathName === "/budgify/goal" 
               ? "bg-orange-50 text-orange-600 border border-orange-500" 
               : "text-black border border-gray-200 hover:text-orange-600 hover:bg-orange-50 hover:border-orange-500 transition-colors duration-200"}`}
             title="Goal Tracker"
@@ -79,44 +79,44 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
         <h1 className="text-gray-500 text-sm font-semibold">NAVIGATION</h1>
       </div>
       <div className="p-5 pt-3">
-        <div className={`${pathName === "/admin/dashboard" 
+        <div className={`${pathName === "/budgify/dashboard" 
           ? "text-blue-600 bg-blue-50 border border-blue-500 font-medium mt-1 rounded-md" 
           : "font-medium mt-1 rounded-md border border-gray-200 hover:text-blue-600 hover:bg-blue-50 hover:border-blue-500 transition-colors duration-200"}`}>
           <Link
-            href="/admin/dashboard"
+            href="/budgify/dashboard"
             className="flex items-center gap-3 p-3"
           >
             <LayoutDashboard className="w-4 h-4"/>
             Dashboard
           </Link>
         </div>
-        <div className={`${pathName === "/admin/add_budget" 
+        <div className={`${pathName === "/budgify/budget" 
           ? "text-yellow-600 bg-yellow-50 border border-yellow-500 font-medium mt-1 rounded-md" 
           : "font-medium mt-1 rounded-md border border-gray-200 hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-500 transition-colors duration-200"}`}>
           <Link
-            href="/admin/add_budget"
+            href="/budgify/budget"
             className="flex items-center gap-3 p-3"
           >
             <CircleDollarSign className="w-4 h-4"/>
             Transaction
           </Link>
         </div>
-        <div className={`${pathName === "/admin/bill_reminder" 
+        <div className={`${pathName === "/budgify/bill" 
           ? "text-violet-600 bg-violet-50 border border-violet-500 font-medium mt-1 rounded-md" 
           : "font-medium mt-1 rounded-md border border-gray-200 hover:text-violet-600 hover:bg-violet-50 hover:border-violet-500 transition-colors duration-200"}`}>
           <Link
-            href="/admin/bill_reminder"
+            href="/budgify/bill"
             className="flex items-center gap-3 p-3"
           >
             <Bell className="w-4 h-4"/>
             Bill Reminder
           </Link>
         </div>
-        <div className={`${pathName === "/admin/goal_tracker" 
+        <div className={`${pathName === "/budgify/goal" 
           ? "text-orange-600 bg-orange-50 border border-orange-500 font-medium mt-1 rounded-md" 
           : "font-medium mt-1 rounded-md border border-gray-200 hover:text-orange-600 hover:bg-orange-50 hover:border-orange-500 transition-colors duration-200"}`}>
           <Link
-            href="/admin/goal_tracker"
+            href="/budgify/goal"
             className="flex items-center gap-3 p-3"
           >
             <Target className="w-4 h-4"/>
