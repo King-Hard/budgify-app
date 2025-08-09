@@ -32,7 +32,7 @@ export default function GoalTracker() {
         <div>
           <button
             onClick={() => setGoal((prev) => !prev)}
-            className="flex justify-center items-center gap-2 py-2 px-3 text-white font-medium rounded-md cursor-pointer bg-orange-500 hover:bg-orange-600"
+            className="flex justify-center items-center gap-2 py-2 px-3 w-32 text-white font-medium rounded-md cursor-pointer bg-orange-500 hover:bg-orange-600 transition-colors duration-300"
           >
             <Plus className="w-5 h-5 text-white" />
             New Goal
@@ -41,7 +41,7 @@ export default function GoalTracker() {
       </div>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(34,197,94,1),0_-2px_2px_0_rgba(34,197,94,1),2px_0_2px_0_rgba(34,197,94,1),-2px_0_2px_0_rgba(34,197,94,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Total Saved</h1>
             <DollarSign className="text-green-600 w-5 h-5" />
@@ -52,7 +52,7 @@ export default function GoalTracker() {
           </div>
         </div>
 
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(139,92,246,1),0_-2px_2px_0_rgba(139,92,246,1),2px_0_2px_0_rgba(139,92,246,1),-2px_0_2px_0_rgba(139,92,246,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Completed Goals</h1>
             <Goal className="text-violet-600 w-5 h-5" />
@@ -63,7 +63,7 @@ export default function GoalTracker() {
           </div>
         </div>
 
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(234,197,8,1),0_-2px_2px_0_rgba(234,197,8,1),2px_0_2px_0_rgba(234,197,8,1),-2px_0_2px_0_rgba(234,197,8,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Overall Progress</h1>
             <Trophy className="text-yellow-600 w-5 h-5" />
@@ -74,7 +74,7 @@ export default function GoalTracker() {
           </div>
         </div>
 
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(249,155,22,1),0_-2px_2px_0_rgba(249,155,22,1),2px_0_2px_0_rgba(249,155,22,1),-2px_0_2px_0_rgba(249,155,22,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Total Goals</h1>
             <Target className="text-orange-600 w-5 h-5" />
@@ -89,7 +89,7 @@ export default function GoalTracker() {
       <div>{goal ? <AddGoal onCancel={handleCloseForm} /> : <></>}</div>
 
       <div className="mt-6 grid sm:grid-cols-1 lg:grid-cols-2 gap-4">
-        <div className="p-5 bg-white rounded-lg shadow-sm">
+        <div className="p-5 bg-white rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(249,155,22,1),0_-2px_2px_0_rgba(249,155,22,1),2px_0_2px_0_rgba(249,155,22,1),-2px_0_2px_0_rgba(249,155,22,1)]">
           <div className="flex items-center gap-2">
             <Laptop className="h-13 w-13 p-3 rounded-md bg-orange-50 text-orange-600 border border-orange-200" />
             <div>
@@ -131,7 +131,7 @@ export default function GoalTracker() {
           </div>
         </div>
 
-        <div className="p-5 bg-white rounded-lg shadow-sm">
+        <div className="p-5 bg-white rounded-lg shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(249,155,22,1),0_-2px_2px_0_rgba(249,155,22,1),2px_0_2px_0_rgba(249,155,22,1),-2px_0_2px_0_rgba(249,155,22,1)]">
           <div className="flex items-center gap-2">
             <Plane className="h-13 w-13 p-3 rounded-md bg-orange-50 text-orange-600 border border-orange-200" />
             <div>

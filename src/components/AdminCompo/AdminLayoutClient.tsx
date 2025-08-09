@@ -51,7 +51,7 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
             {!isMobile && (
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="p-1 rounded-sm hover:bg-blue-100 hover:text-blue-600 transition-colors cursor-pointer"
+                className="p-1 rounded-sm hover:bg-blue-100 hover:text-blue-600 transition-colors duration-300 cursor-pointer"
               >
                 <Columns2 className="w-5 h-5" />
               </button>

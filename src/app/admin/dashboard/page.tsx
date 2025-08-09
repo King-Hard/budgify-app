@@ -35,7 +35,7 @@ export default function Dashboard() {
       </div>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(34,197,94,1),0_-2px_2px_0_rgba(34,197,94,1),2px_0_2px_0_rgba(34,197,94,1),-2px_0_2px_0_rgba(34,197,94,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Total Income</h1>
             <TrendingUp className="text-green-600 w-5 h-5" />
@@ -46,7 +46,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(239,68,68,1),0_-2px_2px_0_rgba(239,68,68,1),2px_0_2px_0_rgba(239,68,68,1),-2px_0_2px_0_rgba(239,68,68,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Total Expences</h1>
             <TrendingDown className="text-red-600 w-5 h-5" />
@@ -57,7 +57,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(139,92,246,1),0_-2px_2px_0_rgba(139,92,246,1),2px_0_2px_0_rgba(139,92,246,1),-2px_0_2px_0_rgba(139,92,246,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Savings</h1>
             <PiggyBank className="text-violet-600 w-5 h-5" />
@@ -68,7 +68,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm">
+        <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(59,130,246,1),0_-2px_2px_0_rgba(59,130,246,1),2px_0_2px_0_rgba(59,130,246,1),-2px_0_2px_0_rgba(59,130,246,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Budget Left</h1>
             <PieChart className="text-blue-600 w-5 h-5" />
@@ -120,7 +120,7 @@ export default function Dashboard() {
             <input
               type="month"
               ref={monthRef}
-              className="px-2 py-1 text-sm sm:text-base rounded-md bg-slate-50 cursor-pointer"
+              className="px-2 py-1 text-sm sm:text-base rounded-md bg-slate-50 cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
             />
           </div>
           <p className="text-sm sm:text-base text-gray-500">

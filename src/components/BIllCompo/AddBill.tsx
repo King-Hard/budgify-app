@@ -125,7 +125,7 @@ export default function AddBill({ onCancel }) {
               {categories.map((category) => (
                 <li
                   key={category.value}
-                  className="px-3 py-2 text-black hover:text-violet-600 hover:bg-violet-50 rounded-md cursor-pointer flex gap-2 items-center"
+                  className="px-3 py-2 text-black hover:text-violet-600 hover:bg-violet-50 rounded-md cursor-pointer flex gap-2 items-center transition-colors duration-200"
                   onClick={() => handleCategorySelect(category)}
                 >
                   {category.icon}
@@ -170,13 +170,13 @@ export default function AddBill({ onCancel }) {
         <button
           type="button"
           onClick={handleCancel}
-          className="cursor-pointer px-3 py-2 w-30 bg-violet-100 rounded-md hover:bg-violet-200"
+          className="cursor-pointer px-3 py-2 w-31 bg-violet-100 rounded-md hover:bg-violet-200 transition-colors duration-300"
         >
           Cancel
         </button>
 
         <button 
-          className="disabled:opacity-50 cursor-pointer px-3 py-2 w-30 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md transition-all duration-300"
+          className="disabled:opacity-50 cursor-pointer px-3 py-2 w-31 flex justify-center items-center gap-2 bg-violet-600 text-white rounded-md transition-all duration-300"
           type="submit"
           disabled={!selectedCategory}
         >

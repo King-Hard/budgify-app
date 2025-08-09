@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Rootlayout({children} : {children: ReactNode}){
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50 min-h-screen`}>
+      <body className={`${inter.className} min-h-screen`}>
         {/* Outer wrapper for margin and centering */}
         <div className="mb-0 mt-0 mr-0 ml-0 flex justify-center items-center">
           {/* Main container with visible full border */}

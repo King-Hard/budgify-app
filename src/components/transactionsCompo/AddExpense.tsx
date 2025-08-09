@@ -86,7 +86,7 @@ export default function AddExpense() {
             {categories.map((category) => (
               <li
                 key={category.value}
-                className="px-3 py-2 text-black hover:text-red-600 hover:bg-red-50 rounded-md cursor-pointer flex gap-2 items-center"
+                className="px-3 py-2 text-black hover:text-red-600 hover:bg-red-50 rounded-md cursor-pointer flex gap-2 items-center transition-colors duration-300"
                 onClick={() => handleCategorySelect(category)}
               >
                 {category.icon}

@@ -24,7 +24,7 @@ export default function ProfileDropdown({ email }: { email: string }) {
           aria-label="User menu"
           aria-haspopup="true"
           aria-expanded={isOpen}
-          className="flex items-center justify-center w-10 h-10 rounded-md shadow-md bg-blue-600 hover:bg-blue-700 text-white font-medium transition-all cursor-pointer"
+          className="flex items-center justify-center w-10 h-10 rounded-md shadow-md bg-blue-600 text-white font-medium cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
         >
           {initial}
         </button>

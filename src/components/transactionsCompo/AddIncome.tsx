@@ -82,7 +82,7 @@ export default function AddIncome() {
             {categories.map((category) => (
               <li
                 key={category.value}
-                className="px-3 py-2 text-black hover:text-green-600 hover:bg-green-50 rounded-md cursor-pointer flex gap-2 items-center "
+                className="px-3 py-2 text-black hover:text-green-600 hover:bg-green-50 rounded-md cursor-pointer flex gap-2 items-center transition-colors duration-200"
                 onClick={() => handleCategorySelect(category)}
               >
                 {category.icon}
