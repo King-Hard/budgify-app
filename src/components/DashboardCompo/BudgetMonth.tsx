@@ -18,7 +18,7 @@ export default function BudgetMonth() {
       <div>
         <h1>SAHDIUAhds</h1>
         <p>asdnkajds</p>
-        <div></div>
+        <div>asdadas<h1></h1></div>
       </div>
 
       {edit ? (
