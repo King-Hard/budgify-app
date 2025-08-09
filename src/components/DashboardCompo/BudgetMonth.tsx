@@ -15,6 +15,10 @@ export default function BudgetMonth() {
         <SquarePen className="w-5 h-5 text-slate-800"/>
       </button>
 
+      <div>
+        
+      </div>
+
       {edit ? (
         <form className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-30 z-50 transition-all duration-500">
           <div className="bg-white p-5 rounded-md shadow-[0_2px_2px_0_rgba(59,130,246,1),0_-2px_2px_0_rgba(59,130,246,1),2px_0_2px_0_rgba(59,130,246,1),-2px_0_2px_0_rgba(59,130,246,1)]">
