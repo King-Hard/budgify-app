@@ -50,7 +50,6 @@ export default async function FinanceSummary() {
 
   return (
     <>
-      <div></div>
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-blue-500">Dashboard</h1>
         <p className="text-gray-500 mt-1">
