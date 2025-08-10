@@ -1,10 +1,18 @@
 "use client";
 
+import { budget } from "@/lib/controllers/budgetAuth";
 import { SquarePen, Wallet } from "lucide-react";
-import { useState } from "react";
+import { useActionState, useState, useEffect } from "react";
 
 export default function BudgetMonth() {
+  const [state, action] = useActionState(budget, undefined);
   const [edit, setEdit] = useState(false);
+
+  useEffect(() => {
+    if (state?.success) {
+      setEdit(false); // Close the modal
+    }
+  }, [state]);
 
   return (
     <div className="flex">
@@ -16,24 +24,32 @@ export default function BudgetMonth() {
       </button>
 
       {edit ? (
-        <form className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-30 z-50 transition-all duration-500">
+        <form 
+          action={action}
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-30 z-50 transition-all duration-500"
+        >
           <div className="bg-white p-5 rounded-md shadow-[0_2px_2px_0_rgba(59,130,246,1),0_-2px_2px_0_rgba(59,130,246,1),2px_0_2px_0_rgba(59,130,246,1),-2px_0_2px_0_rgba(59,130,246,1)]">
             <div className="mb-4">
               <div className="flex items-center gap-1">
                 <Wallet className="text-blue-500"/>
-                <h1 className="text-lg font-medium">We suggest a budget of ₱20,000</h1>
+                <h1 className="text-lg font-medium">Recommended budget: ₱20,000</h1>
               </div>
               <p className="text-[15px] text-gray-500">You can edit this budget amount below.</p>
             </div>
             <div className="">
-              <label>Amount (₱)</label>
+              <label className="font-medium">Amount (₱)</label>
               <input 
+                defaultValue={state?.amount}
                 required
                 type="number" 
-                name="buget"
+                name="amount"
                 placeholder="0.00"
                 className="w-full border py-2 px-3 rounded-md cursor-pointer"
               />
+
+              {state?.errors?.amount && (
+                <p className="text-sm text-red-600">{state.errors.amount}</p>
+              )}
             </div>
 
             <div className="flex justify-center gap-2 mt-4">
@@ -45,6 +61,7 @@ export default function BudgetMonth() {
               </button>
 
               <button 
+                type="submit"
                 className="py-2 px-3 w-25 text-white bg-blue-600 hover:bg-blue-700 rounded-md cursor-pointer transition-colors duration-300"
               >
                 Save
