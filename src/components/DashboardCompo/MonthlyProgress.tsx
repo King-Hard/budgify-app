@@ -96,6 +96,9 @@ export default async function MonthlyProgress() {
       <div>
         <h1>NSIADIEUABFIH</h1>
         <p>asdabfkhewbf</p>
+        <div>
+          
+        </div>
       </div>
     </>
   );
