@@ -51,9 +51,9 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
             {!isMobile && (
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="p-1 rounded-sm hover:bg-blue-100 hover:text-blue-600 transition-colors duration-300 cursor-pointer"
+                className="p-1 bg-gray-100 rounded-sm cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
               >
-                <Columns2 className="w-5 h-5" />
+                <Columns2 className="w-5 h-5"/>
               </button>
             )}
             <h1 className="font-medium">Financial Dashboard</h1>

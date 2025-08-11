@@ -1,4 +1,4 @@
-import { PieChart } from "lucide-react";
+import { Circle } from "lucide-react";
 import BudgetMonth from "./BudgetMonth";
 import { getCollection } from "@/lib/configs/database";
 import getSession from "@/lib/configs/getSession";
@@ -40,14 +40,27 @@ export default async function MonthlyProgress() {
 
   // percentage
   const budgetUsed = monthlyBudget > 0 ? (totalExpense / monthlyBudget) * 100 : 0;
-  const budgetUsedWidth = Math.min(budgetUsed, 100); 
+  const budgetUsedWidth = Math.min(budgetUsed, 100);
+
+  // bar color logic
+  let barColor = "bg-green-500";
+  let statusColor = "text-green-500";
+  let statusBorder = "bg-green-50"
+  if (budgetUsed >= 50 && budgetUsed <= 80) {
+    barColor = "bg-yellow-500";
+    statusColor = "text-yellow-500";
+    statusBorder = "bg-yellow-50";
+  } else if (budgetUsed > 80) {
+    barColor = "bg-red-500";
+    statusColor = "text-red-500";
+    statusBorder = "bg-red-50";
+  };
 
   return (
     <>
       <div className="w-full p-5 rounded-lg shadow-sm bg-white mt-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <PieChart className="text-blue-500 " />
             <h1 className="text-xl sm:text-2xl font-medium">
               Monthly Budget Progress
             </h1>
@@ -57,26 +70,30 @@ export default async function MonthlyProgress() {
           </div>
         </div>
         <div className="text-gray-500 ">
-          <p className="text-sm sm:text-base">
-            You've spent ₱ {totalExpense.toLocaleString()} of your ₱ {monthlyBudget.toLocaleString()} budget
+          <p className="text-sm sm:text-base font-medium">
+            You've spent ₱{totalExpense.toLocaleString()} of your ₱{monthlyBudget.toLocaleString()} budget
           </p>
         </div>
 
-        <div className="mb-6">
+        <div className="">
           <div className="w-full bg-gray-200 h-3 rounded-full mt-5 mb-5">
-            <div 
-              className="bg-blue-500 h-3 rounded-full w-1/2"
+            <div
+              className={`${barColor} h-3 rounded-full transition-all duration-500`}
               style={{ width: `${budgetUsedWidth}%` }}
-            >
-            </div>
+            ></div>
           </div>
-          <div className="flex justify-between w-full text-sm">
-            <p className="text-gray-500">₱ {totalExpense.toLocaleString()}</p>
-            <p className="text-red-500 font-medium">{Math.round(budgetUsed)}% used</p>
-            <p className="text-gray-500">₱ {monthlyBudget.toLocaleString()}</p>
+          <div className="flex justify-between w-full text-sm items-center">
+            <p className="text-gray-500 font-medium">₱{totalExpense.toLocaleString()}</p>
+            <div className={`flex items-center gap-1 py-1 px-2 rounded-md ${statusBorder}`}>
+              <p className={`${statusColor} font-medium`}>
+                {Math.round(budgetUsed)}% used
+              </p>
+            </div>
+            <p className="text-gray-500 font-medium">₱{monthlyBudget.toLocaleString()}</p>
           </div>
         </div>
       </div>
+      <div></div>
     </>
   );
 }

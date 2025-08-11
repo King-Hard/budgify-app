@@ -38,7 +38,7 @@ export default function BillReminder() {
       <div className="mb-6 flex justify-between items-center">
         <div>
           <h1 className="text-3xl font-bold text-violet-500">Bill Reminders</h1>
-          <p className="text-gray-500 mt-1">Never miss a payment again</p>
+          <p className="text-gray-500 mt-1 font-medium">Never miss a payment again</p>
         </div>
 
         <div>
@@ -119,7 +119,7 @@ export default function BillReminder() {
               className="px-2 py-1 rounded-md text-sm sm:text-base bg-slate-50 cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
             />
           </div>
-          <p className="text-sm sm:text-base text-gray-500">Manage your recurring payments and reminders</p>
+          <p className="text-sm sm:text-base text-gray-500 font-medium">Manage your recurring payments and reminders</p>
         </div>
 
         <div className="mt-6">    

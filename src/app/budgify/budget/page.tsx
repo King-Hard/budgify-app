@@ -15,15 +15,15 @@ export default function AddBudget() {
     <div className="p-5 border-l border-gray-200">
       <div className="mb-6">
         <h1 className="text-yellow-500 text-3xl font-bold">Transaction</h1>
-        <p className="text-gray-500 mt-1">Record your income and expenses</p>
+        <p className="text-gray-500 mt-1 font-medium">Record your income and expenses</p>
       </div>
       <div className="max-w-[550px] bg-white p-4 rounded-lg shadow-md">
         <div className="mb-6">
-          <div className="flex items-center gap-2 mb-1">
+          <div className="flex items-center gap-2">
             <CircleDollarSign className="text-yellow-500 w-7 h-7"/>
             <h1 className="text-2xl font-semibold">New Transaction</h1>
           </div>
-          <p className="text-gray-500 text-sm sm:text-base">
+          <p className="text-gray-500 text-sm sm:text-base font-medium">
             Add a new income or expense to track your budget
           </p>
         </div>
@@ -35,6 +35,7 @@ export default function AddBudget() {
                 ? `flex items-center justify-center gap-2 p-1 border border-red-300 rounded-md w-auto md:w-60 bg-red-50 px-6 cursor-pointer transition-all duration-200`
                 : "flex items-center justify-center gap-2 p-1 border border-white rounded-md w-auto md:w-60 px-6 cursor-pointer"
             }
+            type="button"
             onClick={() => setTransaction(true)}
           >
             <MinusCircle className="text-red-500 w-4 h-4" />
@@ -46,6 +47,7 @@ export default function AddBudget() {
                 ? `flex items-center justify-center gap-2 p-1 border border-green-300 rounded-md w-auto md:w-60 bg-green-50 px-6 cursor-pointer transition-all duration-200`
                 : "flex items-center justify-center gap-2 p-1 border border-white rounded-md w-auto md:w-60 px-6 cursor-pointer"
             }
+            type="button"
             onClick={() => setTransaction(false)}
           >
             <PlusCircle className="text-green-500 w-4 h-4" />

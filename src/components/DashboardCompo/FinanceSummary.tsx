@@ -1,6 +1,6 @@
 import { getCollection } from "@/lib/configs/database";
 import getSession from "@/lib/configs/getSession";
-import { PieChart, TrendingDown, TrendingUp, PiggyBank } from "lucide-react";
+import { PieChart, TrendingDown, TrendingUp, PiggyBank, Wallet } from "lucide-react";
 
 export default async function FinanceSummary() {
   const user = await getSession();
@@ -46,13 +46,13 @@ export default async function FinanceSummary() {
     userBudget = defaultBudget;
   }
   const monthlyBudget = userBudget.monthlyBudget;
-  const totalBudget = monthlyBudget - totalExpense;
+  const totalBudget = monthlyBudget - totalExpense;  
 
   return (
     <>
       <div className="mb-6">
         <h1 className="text-3xl font-bold text-blue-500">Dashboard</h1>
-        <p className="text-gray-500 mt-1">
+        <p className="text-gray-500 mt-1 font-medium">
           Track your spending and manage your budget
         </p>
       </div>
@@ -64,10 +64,9 @@ export default async function FinanceSummary() {
             <TrendingUp className="text-green-600 w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-2xl text-green-600 font-bold">
-              ₱ {totalIncome.toLocaleString()}
+            <h1 className="text-3xl text-green-600 font-bold">
+              ₱{totalIncome.toLocaleString()}
             </h1>
-            <p className="text-sm text-gray-500">+12% from last month</p>
           </div>
         </div>
 
@@ -77,10 +76,9 @@ export default async function FinanceSummary() {
             <TrendingDown className="text-red-600 w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-2xl text-red-600 font-bold">
-              ₱ {totalExpense.toLocaleString()}
+            <h1 className="text-3xl text-red-600 font-bold">
+              ₱{totalExpense.toLocaleString()}
             </h1>
-            <p className="text-sm text-gray-500">-5% from last month</p>
           </div>
         </div>
 
@@ -90,21 +88,21 @@ export default async function FinanceSummary() {
             <PiggyBank className="text-violet-600 w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-2xl text-violet-600 font-bold">
-              ₱ {totalSavings.toLocaleString()}
+            <h1 className="text-3xl text-violet-600 font-bold"> 
+              ₱{totalSavings > 0 ? totalSavings.toLocaleString() : 0}             
             </h1>
-            <p className="text-sm text-gray-500">+25% from last month</p>
           </div>
         </div>
 
         <div className="px-5 py-6 space-y-2 w-full rounded-lg bg-white shadow-sm transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(59,130,246,1),0_-2px_2px_0_rgba(59,130,246,1),2px_0_2px_0_rgba(59,130,246,1),-2px_0_2px_0_rgba(59,130,246,1)]">
           <div className="flex justify-between">
             <h1 className="font-medium">Budget Left</h1>
-            <PieChart className="text-blue-600 w-5 h-5" />
+            <Wallet className="text-blue-600 w-5 h-5" />
           </div>
           <div>
-            <h1 className="text-2xl text-blue-600 font-bold">₱ {totalBudget.toLocaleString()}</h1>
-            <p className="text-sm text-gray-500">7% of monthly budget</p>
+            <h1 className="text-3xl text-blue-600 font-bold">
+              ₱{totalBudget > 0 ? totalBudget.toLocaleString() : 0}
+            </h1>
           </div>
         </div>
       </div>

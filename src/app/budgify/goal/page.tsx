@@ -26,7 +26,7 @@ export default function GoalTracker() {
       <div className="mb-6 flex justify-between items-center">
         <div className="max-w-sm">
           <h1 className="text-3xl font-bold text-orange-500">Goal Tracker</h1>
-          <p className="text-gray-500 mt-1 ">Track your saving goals</p>
+          <p className="text-gray-500 mt-1 font-medium">Track your saving goals</p>
         </div>
 
         <div>

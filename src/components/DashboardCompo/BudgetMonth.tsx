@@ -30,11 +30,8 @@ export default function BudgetMonth() {
         >
           <div className="bg-white p-5 rounded-md shadow-[0_2px_2px_0_rgba(59,130,246,1),0_-2px_2px_0_rgba(59,130,246,1),2px_0_2px_0_rgba(59,130,246,1),-2px_0_2px_0_rgba(59,130,246,1)]">
             <div className="mb-4">
-              <div className="flex items-center gap-1">
-                <Wallet className="text-blue-500"/>
-                <h1 className="text-lg font-medium">Recommended budget: ₱20,000</h1>
-              </div>
-              <p className="text-[15px] text-gray-500">You can edit this budget amount below.</p>
+              <h1 className="text-xl font-medium text-center">Recommended budget ₱20,000</h1>
+              <p className="text-[15px] text-gray-500 font-medium text-center">change your monthly budget anytime.</p>
             </div>
             <div className="">
               <label className="font-medium">Amount (₱)</label>
@@ -54,6 +51,7 @@ export default function BudgetMonth() {
 
             <div className="flex justify-center gap-2 mt-4">
               <button 
+                type="button"
                 onClick={() => setEdit(false)}
                 className="py-2 px-3 w-25 bg-blue-100 hover:bg-blue-200 rounded-md cursor-pointer transition-colors duration-300"
               >
