@@ -93,7 +93,9 @@ export default async function MonthlyProgress() {
           </div>
         </div>
       </div>
-      <div></div>
+      <div>
+        <h1></h1>
+      </div>
     </>
   );
 }
