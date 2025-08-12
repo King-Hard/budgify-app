@@ -2,14 +2,15 @@
 
 import { expense } from "@/lib/controllers/transAuth";
 import {
-  Car,
   ChevronDown,
   ChevronUp,
+  Cross,
   Gamepad2,
   GraduationCap,
-  House,
   MinusCircle,
+  ReceiptText,
   ShoppingCart,
+  User,
   Utensils,
 } from "lucide-react";
 
@@ -28,12 +29,13 @@ export default function AddExpense() {
   }, [state]);
 
   const categories = [
-    { value: "food", label: "Food and Dining", icon: <Utensils size={16} /> },
-    { value: "transportation", label: "Transportation", icon: <Car size={16} /> },
-    { value: "entertainment", label: "Entertainment", icon: <Gamepad2 size={16} /> },
-    { value: "shopping", label: "Shopping", icon: <ShoppingCart size={16} /> },
-    { value: "bills", label: "Bills & Utilities", icon: <House size={16} /> },
+    { value: "food", label: "Daily Meals", icon: <Utensils size={16} /> },
+    { value: "utility", label: "Bills & Utilities", icon: <ReceiptText size={16} /> },
+    { value: "healthcare", label: "Healthcare", icon: <Cross size={16} /> },
     { value: "education", label: "Education", icon: <GraduationCap size={16} /> },
+    { value: "personal", label: "Personal Needs", icon: <User size={16} /> },
+    { value: "entertainment", label: "Entertainment", icon: <Gamepad2 size={16} /> },
+    { value: "grocery", label: "Groceries", icon: <ShoppingCart size={16} /> },
   ];
 
   const handleCategorySelect = (category) => {
@@ -134,7 +136,7 @@ export default function AddExpense() {
           disabled={!selectedCategory}
         >
           <MinusCircle className="w-5 h-5"/>
-          {selectedCategory ? "Add Expense" : "Select a category to enable this button"}
+          Add Expense
         </button>
       </div>
     </form>

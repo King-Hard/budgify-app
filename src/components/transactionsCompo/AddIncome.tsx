@@ -9,6 +9,7 @@ import {
   Laptop,
   PlusCircle,
   SquaresExclude,
+  Wallet,
 } from "lucide-react";
 
 import { useActionState, useState, useEffect } from "react";
@@ -26,6 +27,7 @@ export default function AddIncome() {
   }, [state]);
   
   const categories = [
+    { value: "allowance", label: "Allowance", icon: <Wallet size={16} /> },
     { value: "salary", label: "Salary", icon: <Briefcase size={16} /> },
     { value: "freelance", label: "Freelance", icon: <Laptop size={16} /> },
     { value: "business", label: "Business", icon: <Handshake size={16} /> },
@@ -130,7 +132,7 @@ export default function AddIncome() {
           disabled={!selectedCategory}
         >
           <PlusCircle className="w-5 h-5"/>
-          {selectedCategory ? "Add Income" : "Select a category to enable this button"}
+          Add Income
         </button>
       </div>
     </form>

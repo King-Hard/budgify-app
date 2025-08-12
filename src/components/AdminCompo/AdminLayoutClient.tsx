@@ -1,16 +1,27 @@
 "use client";
 
-import Sidebar from "@/components/AdminCompo/Sidebar";
 import ProfileDropdown from "@/components/ProfileDropdown";
 import { Columns2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { ReactNode } from "react";
+import Navigations from "./Navigations";
 
-export default function AdminLayoutClient({children, email,}: {children: ReactNode; email: string;}) {
+interface AdminLayoutClientProps {
+  children: ReactNode;
+  email: string;
+  totalIncome: number;
+  totalExpense: number;
+}
+
+export default function AdminLayoutClient({
+  children,
+  email,
+  totalIncome,
+  totalExpense,
+}: AdminLayoutClientProps) {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Handle responsive behavior
   useEffect(() => {
     const handleResize = () => {
       const mobile = window.innerWidth < 768; // md breakpoint
@@ -18,7 +29,7 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
       setSidebarOpen(!mobile);
     };
 
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -27,15 +38,17 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
 
   return (
     <div className="flex flex-1 min-h-0 h-full">
-      {/* Sidebar - static, no scroll */}
       <div
         className="h-full transition-normal duration-100 ease-in-out"
         style={{ width: sidebarWidth }}
       >
-        <Sidebar isCollapsed={!sidebarOpen} />
+        <Navigations
+          isCollapsed={!sidebarOpen}
+          totalIncome={totalIncome}
+          totalExpense={totalExpense}
+        />
       </div>
 
-      {/* Mobile overlay */}
       {isMobile && sidebarOpen && (
         <div
           className="fixed inset-0 bg-opacity-50 z-40 md:hidden"
@@ -43,9 +56,7 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
         />
       )}
 
-      {/* Main area */}
       <div className="relative flex flex-col flex-1 min-h-0">
-        {/* Fixed Header */}
         <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between py-1.5 px-4 h-[60px] border-b border-l border-gray-200 bg-white/20 backdrop-blur-sm">
           <div className="flex items-center gap-4">
             {!isMobile && (
@@ -53,7 +64,7 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
                 onClick={() => setSidebarOpen(!sidebarOpen)}
                 className="p-1 bg-gray-100 rounded-sm cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
               >
-                <Columns2 className="w-5 h-5"/>
+                <Columns2 className="w-5 h-5" />
               </button>
             )}
             <h1 className="font-medium">Financial Dashboard</h1>
@@ -65,7 +76,6 @@ export default function AdminLayoutClient({children, email,}: {children: ReactNo
           )}
         </div>
 
-        {/* Scrollable content only */}
         <div className="flex-1 overflow-y-auto pt-[55px] hide-scrollbar">
           {children}
         </div>

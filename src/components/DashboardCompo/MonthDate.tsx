@@ -17,7 +17,7 @@ export default function MonthDate () {
       <input
         type="month"
         ref={monthRef}
-        className="px-2 py-1 text-sm sm:text-base rounded-md bg-slate-50 cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
+        className="px-2 py-1 w-37 text-sm rounded-md bg-slate-50 cursor-pointer transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
       />
     </div>
   );

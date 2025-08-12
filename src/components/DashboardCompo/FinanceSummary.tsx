@@ -1,6 +1,6 @@
 import { getCollection } from "@/lib/configs/database";
 import getSession from "@/lib/configs/getSession";
-import { PieChart, TrendingDown, TrendingUp, PiggyBank, Wallet } from "lucide-react";
+import { TrendingDown, TrendingUp, PiggyBank, Wallet } from "lucide-react";
 
 export default async function FinanceSummary() {
   const user = await getSession();
