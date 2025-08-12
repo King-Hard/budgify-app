@@ -48,7 +48,9 @@ export default async function RecentTransactions() {
     <div className="bg-white rounded-lg shadow-sm w-full p-5 mt-6">
       <div>
 
-      
+      <div>
+        
+      </div>
 
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
