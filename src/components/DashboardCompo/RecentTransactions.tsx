@@ -50,6 +50,7 @@ export default async function RecentTransactions() {
 
       <div>
         <h1>HAHAHAHHA</h1>
+        <p></p>
       </div>
 
         <div className="flex justify-between items-center">
