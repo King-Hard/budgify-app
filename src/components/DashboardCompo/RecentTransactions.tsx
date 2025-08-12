@@ -47,15 +47,6 @@ export default async function RecentTransactions() {
   return (
     <div className="bg-white rounded-lg shadow-sm w-full p-5 mt-6">
       <div>
-
-      <div>
-        <h1>HAHAHAHHA</h1>
-        <p>ahdbnashdbhbfhsd</p>
-        <div>
-          <h1></h1>
-        </div>
-      </div>
-
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <h1 className="text-xl sm:text-2xl font-medium">Transaction History</h1>
