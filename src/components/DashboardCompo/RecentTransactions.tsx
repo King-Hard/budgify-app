@@ -52,7 +52,7 @@ export default async function RecentTransactions() {
         <h1>HAHAHAHHA</h1>
         <p>ahdbnashdbhbfhsd</p>
         <div>
-          
+          <h1></h1>
         </div>
       </div>
 
