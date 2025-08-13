@@ -61,6 +61,7 @@ export default async function RecentTransactions() {
           <h1>ANSDJBASBDHJDBS</h1>
           <p>asjdnkjsanfkjsdnf</p>
         </div>
+        <div></div>
       </div>
 
       <div className="">
