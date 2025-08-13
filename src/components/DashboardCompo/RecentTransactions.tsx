@@ -56,12 +56,6 @@ export default async function RecentTransactions() {
         <p className="text-sm sm:text-base font-medium text-gray-500">
           Stay updated on your financial activity this month
         </p>
-        
-        <div>
-          <h1>ANSDJBASBDHJDBS</h1>
-          <p>asjdnkjsanfkjsdnf</p>
-        </div>
-        <div></div>
       </div>
 
       <div className="">
