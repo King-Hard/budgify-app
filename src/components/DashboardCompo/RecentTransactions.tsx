@@ -57,6 +57,9 @@ export default async function RecentTransactions() {
           Stay updated on your financial activity this month
         </p>
         
+        <div>
+          
+        </div>
       </div>
 
       <div className="">
