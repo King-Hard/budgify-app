@@ -14,7 +14,7 @@ export const ExpenseSchema = z
 
     description: z
       .string()
-      .max(20, {message: "Max of 20 characters only."})
+      .max(25, {message: "Max of 20 characters only."})
       .trim(),
 });
 
