@@ -81,7 +81,7 @@ export default function AddBill({onCancel}) {
         </div>
           <div>
             <h1>asdasdsa</h1>
-            <p></p>
+            <p>adsadadass</p>
           </div>
 
         <div className="flex-col">
