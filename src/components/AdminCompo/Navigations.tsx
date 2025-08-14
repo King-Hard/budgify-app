@@ -41,9 +41,9 @@ export default function Navigations({ isCollapsed, totalIncome, totalExpense }: 
             <LayoutDashboard className="w-5 h-5" />
           </Link>
           <Link
-            href="/budgify/budget"
+            href="/budgify/transaction"
             className={`p-3 rounded-md cursor-pointer ${
-              pathName === "/budgify/budget"
+              pathName === "/budgify/transaction"
                 ? "bg-yellow-50 text-yellow-600 border border-yellow-500"
                 : "text-black border border-gray-200 hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-500 transition-colors duration-200"
             }`}
@@ -118,12 +118,12 @@ export default function Navigations({ isCollapsed, totalIncome, totalExpense }: 
         </div>
         <div
           className={`${
-            pathName === "/budgify/budget"
+            pathName === "/budgify/transaction"
               ? "text-yellow-600 bg-yellow-50 border border-yellow-500 font-medium mt-1 rounded-md"
               : "font-medium mt-1 rounded-md border border-gray-200 hover:text-yellow-600 hover:bg-yellow-50 hover:border-yellow-500 transition-colors duration-200"
           }`}
         >
-          <Link href="/budgify/budget" className="flex items-center gap-3 p-3">
+          <Link href="/budgify/transaction" className="flex items-center gap-3 p-3">
             <CircleDollarSign className="w-4 h-4" />
             Transaction
           </Link>

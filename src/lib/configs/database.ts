@@ -14,7 +14,7 @@ const client = new MongoClient(process.env.DB_URI, {
   }
 });
 
-async function getDB(dbName) {
+async function getDB(dbName: string) {
   try {
     await client.connect();
     console.log("Database connected!");
@@ -24,7 +24,7 @@ async function getDB(dbName) {
   }
 };
 
-export async function getCollection(collectionName) {
+export async function getCollection(collectionName: string) {
   const storage = await getDB("budgify_app");
   if(storage) return storage.collection(collectionName);
 

@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { decrypt } from "@/lib/configs/session";
 
-const protectedRoutes = ["/budgify", "/budgify/dashboard", "/budgify/budget", "/budgify/bill", "/budgify/goal"];
+const protectedRoutes = ["/budgify", "/budgify/dashboard", "/budgify/transaction", "/budgify/bill", "/budgify/goal"];
 const authRoutes = ["/login", "/signup"];
 
 export async function middleware(request: NextRequest) {

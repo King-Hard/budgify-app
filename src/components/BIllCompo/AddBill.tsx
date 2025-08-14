@@ -17,7 +17,7 @@ import {
 
 import { useActionState, useState, useEffect } from "react";
 
-export default function AddBill({ onCancel }) {
+export default function AddBill({onCancel}) {
   const [state, action] = useActionState(bill, undefined);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [open, setOpen] = useState(false);
@@ -45,7 +45,7 @@ export default function AddBill({ onCancel }) {
   };
 
   const handleCancel = () => {
-    onCancel(); // Call parent function to close form
+    onCancel();
   };
 
   return (

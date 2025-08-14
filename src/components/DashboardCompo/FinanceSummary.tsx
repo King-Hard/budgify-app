@@ -1,52 +1,11 @@
-import { getCollection } from "@/lib/configs/database";
-import getSession from "@/lib/configs/getSession";
 import { TrendingDown, TrendingUp, PiggyBank, Wallet } from "lucide-react";
+import { getUserTransaction, calculateTotals, getUserBudget } from "@/lib/helpers/transactions";
 
 export default async function FinanceSummary() {
-  const user = await getSession();
-  const transacCollection = await getCollection("transactions");
-  const transaction = await transacCollection
-    ?.find({ userId: user.userId })
-    .toArray();
-
-  // income
-  const incomeTransactions = transaction?.filter(
-    (item) => item.name === "Income"
-  );
-  const totalIncome =
-    incomeTransactions?.reduce((total, item) => {
-      return total + item.amount;
-    }, 0) || 0;
-
-  // expense
-  const expenseTransactions = transaction?.filter(
-    (item) => item.name === "Expense"
-  );
-  const totalExpense =
-    expenseTransactions?.reduce((total, item) => {
-      return total + item.amount;
-    }, 0) || 0;
-
-  // savings
-  const totalSavings = totalIncome - totalExpense;
-
-   // budget
-  const budgetCollection = await getCollection("budgets");
-  let userBudget = await budgetCollection?.findOne({ userId: user.userId });
-
-  if (!userBudget) {
-    const defaultBudget = {
-      userId: user.userId,
-      monthlyBudget: 20000, // default
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    };
-
-    await budgetCollection?.insertOne(defaultBudget);
-    userBudget = defaultBudget;
-  }
-  const monthlyBudget = userBudget.monthlyBudget;
-  const totalBudget = monthlyBudget - totalExpense;  
+  const {transactions, user} = await getUserTransaction();
+  const monthlyBudget = await getUserBudget(user.userId);
+  const {totalIncome, totalExpense, totalSavings} = calculateTotals(transactions);
+  const totalBudget = monthlyBudget - totalExpense;
 
   return (
     <>

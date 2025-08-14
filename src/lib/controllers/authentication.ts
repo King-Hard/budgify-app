@@ -7,7 +7,7 @@ import { createSession } from "../configs/session";
 import { SignupFormSchema, LoginFormSchema } from "../models/schema";
 import { cookies } from "next/headers";
 
-export async function signup(state, formData) {
+export async function signup(formData) {
   const validatedFields = SignupFormSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),
@@ -47,7 +47,7 @@ export async function signup(state, formData) {
   return redirect("/budgify/dashboard");
 };
 
-export async function login(state, formData) {
+export async function login(formData) {
   const validatedFields = LoginFormSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),

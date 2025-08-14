@@ -1,7 +1,7 @@
 "use client";
 
 import { budget } from "@/lib/controllers/budgetAuth";
-import { SquarePen, Wallet } from "lucide-react";
+import { SquarePen } from "lucide-react";
 import { useActionState, useState, useEffect } from "react";
 
 export default function BudgetMonth() {
@@ -10,7 +10,7 @@ export default function BudgetMonth() {
 
   useEffect(() => {
     if (state?.success) {
-      setEdit(false); // Close the modal
+      setEdit(false); 
     }
   }, [state]);
 

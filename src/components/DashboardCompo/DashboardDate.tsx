@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function MonthDate () {
+export default function MonthDate() {
   const monthRef = useRef(null);
 
   useEffect(() => {
