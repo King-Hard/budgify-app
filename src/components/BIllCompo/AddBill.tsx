@@ -79,6 +79,7 @@ export default function AddBill({onCancel}) {
             <p className="text-sm  text-red-600">{state.errors.bill}</p>
           )}
         </div>
+          <div></div>
 
         <div className="flex-col">
           <label className="font-medium">
