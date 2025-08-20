@@ -98,15 +98,6 @@ export default function AddBill({onCancel}) {
           )}
         </div>
 
-        <div>
-          <h1>agffafa</h1>
-          <h1>adsadsadsadsa</h1>
-          <div>
-            <h1>asfasfafs</h1>
-          </div>
-        </div>
-
-
         <div className="relative">
           <label className="font-medium">Category</label>
           <button
