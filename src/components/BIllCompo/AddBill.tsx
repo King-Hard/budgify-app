@@ -98,6 +98,9 @@ export default function AddBill({onCancel}) {
           )}
         </div>
 
+          
+
+
         <div className="relative">
           <label className="font-medium">Category</label>
           <button

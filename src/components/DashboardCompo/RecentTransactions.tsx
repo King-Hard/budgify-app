@@ -39,7 +39,6 @@ export default async function RecentTransactions() {
         <MonthDate/>
       </div>
       <p className="text-sm sm:text-base font-medium text-gray-500">Stay updated on your financial activity this month</p>
-
       <div>
         {transactions?.map((item, index) => {
           const CardComponent = cardComponents[item.category];
