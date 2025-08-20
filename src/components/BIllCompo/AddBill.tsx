@@ -102,7 +102,7 @@ export default function AddBill({onCancel}) {
           <h1>agffafa</h1>
           <h1>adsadsadsadsa</h1>
           <div>
-            <h1></h1>
+            <h1>asfasfafs</h1>
           </div>
         </div>
 
