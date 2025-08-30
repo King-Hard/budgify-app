@@ -5,7 +5,7 @@ import getSession from "../configs/getSession";
 import { getCollection } from "../configs/database";
 import { revalidatePath } from "next/cache";
 
-export async function budget(formData) {
+export async function budget(state, formData) {
   const session = await getSession(); 
   if (!session) {
     return { errors: { general: "Not authenticated" } };

@@ -4,7 +4,7 @@ import { getCollection } from "../configs/database";
 import getSession from "../configs/getSession";
 import { BillSchema } from "../models/billSchema";
 
-export async function bill(formData) {
+export async function bill(state, formData) {
   const session = await getSession(); 
   if (!session) {
     return { errors: { general: "Not authenticated" } };

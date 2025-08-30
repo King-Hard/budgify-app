@@ -5,7 +5,7 @@ import { ExpenseSchema, IncomeSchema } from "../models/transSchema";
 import getSession from "../configs/getSession";
 import { revalidatePath } from "next/cache";
 
-export async function expense(formData) {
+export async function expense(state, formData) {
   const session = await getSession();
   if (!session) {
     return { errors: { general: "Not authenticated" } };

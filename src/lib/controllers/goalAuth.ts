@@ -4,7 +4,7 @@ import { getCollection } from "../configs/database";
 import getSession from "../configs/getSession";
 import { goalSchema } from "../models/goalSchema";
 
-export async function goal(formData) {
+export async function goal(state, formData) {
   const session = await getSession();
   if (!session) {
     return { errors: { general: "Not authenticated" } };
