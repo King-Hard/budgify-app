@@ -45,7 +45,7 @@ export async function expense(state, formData) {
   }
 }
 
-export async function income(formData) {
+export async function income(state, formData) {
   const session = await getSession();
   if (!session) {
     return { errors: { general: "Not authenticated" } };
