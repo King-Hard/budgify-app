@@ -149,6 +149,10 @@ export default function BillReminder() {
             </div>
           </div>
 
+          <div>
+            
+          </div>
+
           <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-gray-50">
             <div>
               <Wifi className="h-10 w-10 p-2.5 border border-violet-200 rounded-md flex items-center text-violet-500 bg-violet-50"/>
