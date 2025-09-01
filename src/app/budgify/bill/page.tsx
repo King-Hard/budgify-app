@@ -153,6 +153,9 @@ export default function BillReminder() {
             <h1>
               hahahaha
             </h1>
+            <p>
+              
+            </p>
           </div>
 
           <div className="flex items-center gap-2 p-4 rounded-lg mt-3 bg-gray-50">
