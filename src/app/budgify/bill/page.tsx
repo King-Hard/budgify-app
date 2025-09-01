@@ -154,7 +154,7 @@ export default function BillReminder() {
               hahahaha
             </h1>
             <p>
-              
+              HAHAHAHA
             </p>
           </div>
 
