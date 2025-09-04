@@ -75,10 +75,16 @@ export default function Navigations({ isCollapsed, totalIncome, totalExpense }: 
           </Link>
         </div>
         <div className="mb-6 px-2 space-y-3 mt-20">
-          <div className="p-2 rounded-md bg-green-50 border border-green-400 transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]">
+          <div 
+            title={totalIncome.toLocaleString()} 
+            className="p-2 rounded-md bg-green-50 border border-green-400 transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
+          >
             <TrendingUp className="w-4 h-4 text-green-600 mx-auto" />
           </div>
-          <div className="p-2 rounded-md bg-red-50 border border-red-400 transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]">
+          <div 
+            title={totalExpense.toLocaleString()}
+            className="p-2 rounded-md bg-red-50 border border-red-400 transition-shadow duration-300 hover:shadow-[0_2px_2px_0_rgba(0,0,0,0.2),0_-2px_2px_0_rgba(0,0,0,0.2),2px_0_2px_0_rgba(0,0,0,0.2),-2px_0_2px_0_rgba(0,0,0,0.2)]"
+          >
             <DollarSign className="w-4 h-4 text-red-600 mx-auto" />
           </div>
         </div>
